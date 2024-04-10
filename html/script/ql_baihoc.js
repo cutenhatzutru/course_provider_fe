@@ -1,5 +1,6 @@
 var urlParams = new URLSearchParams(window.location.search);
 var chapter_id = urlParams.get('data');
+let preview_btn = 1;
 
 function getLesson() {
    var urlParams = new URLSearchParams(window.location.search);
@@ -34,7 +35,7 @@ function getLesson() {
            <td contenteditable="true">${element.title}</td>
            <td contenteditable="true">${element.description}</td>
            <td>
-             <span class="table-down"><a href="ql_baihoc.html" class="indigo-text"><i class="ri-bill-fill" aria-hidden="true"></i></a></span>
+           <span class="#"><button onclick="previewLesson(${element.id})" type="button" class="btn btn-outline-primary">Preview</button></span>
            </td>
            <td>
              <span class="#"><a href="suachuong.html" class="indigo-text"><i class="las la-edit" aria-hidden="true"></i></a></span>
@@ -78,6 +79,32 @@ function getLesson() {
 
 let addnewlesson = ()=>{
   window.location.href = "thembaihoc.html?data="+chapter_id;
+}
+
+function previewLesson(id){
+  let frame = document.getElementById("previewframe")
+  if(preview_btn === 1){
+    fetch("http://localhost:8080/download/lesson/getlessonbyid?id="+id)
+    .then(response => response.json())
+    .then(data =>{
+      frame.style.display = "block"
+      
+      document.getElementById("lessonName").innerText = data.title;
+      if(data.videoUrl!=null){
+        document.getElementById("videoContainer").innerHTML = `<iframe class="embed-responsive-item" src="${data.videoUrl}" allowfullscreen=""></iframe>`
+      }
+      document.getElementById("lessonContent").innerText = data.content
+    })
+    preview_btn = 0 ;
+  }
+  else{
+    frame.style.setProperty('display', 'none', 'important');
+    document.getElementById("videoContainer").innerHTML = "";
+    preview_btn = 1;
+  }
+
+  console.log(preview_btn)
+
 }
 
  document.addEventListener('DOMContentLoaded', getLesson);

@@ -26,7 +26,8 @@ function updatechapter() {
   let body_data ={
     "id":data1,
     "title":title,
-    "description":description
+    "description":description,
+    "course_id":data1
   }
 
 
@@ -43,13 +44,13 @@ function updatechapter() {
     .then(response => response.json()) // Chuyển đổi response sang định dạng JSON
     .then(data => {
       console.log(data)
-     // window.location.href = "ql_chuong.html";
+      window.location.href = "ql_chuong.html?data="+data1;
     })
     .catch(error => {
       console.error('Error:', error); // Log lỗi nếu có
     });
 }
-    // Gửi yêu cầu PUT/PATCH đến API để cập nhật thông tin khóa học
+
 
 
 document.addEventListener('DOMContentLoaded', getchapterbyid);

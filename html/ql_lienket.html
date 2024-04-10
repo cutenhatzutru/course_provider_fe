@@ -39,9 +39,9 @@
                   <ul id="iq-sidebar-toggle" class="iq-menu">
                      <li class="iq-menu-title"><i class="ri-separator"></i><span>Main</span></li>
                      <li><a href="index.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Dashboard</span></a></li>
-                     <li class="active"><a href="#ql_khoahoc" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý khóa học</span></a></li>
+                     <li><a href="#ql_khoahoc" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý khóa học</span></a></li>
                      <li><a href="todo.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý ứng dụng</span></a></li>
-                     <li><a href="todo.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý liên kết</span></a></li>
+                     <li class="active"><a href="ql_lienket.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý liên kết</span></a></li>
                      <li>
                         <a href="#user-info" class="iq-waves-effect collapsed"  data-toggle="collapse" aria-expanded="false"><i class="ri-user-line"></i><span>Quản lý tài nguyên</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="user-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
@@ -69,9 +69,8 @@
                   <h5 class="mb-0">LMS</h5>
                   <nav aria-label="breadcrumb">
                      <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="ql_khoahoc.html">Course</a></li>
-                        <li class="breadcrumb-item"><a href="ql_chuong.html">Chapter</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Lesson Management</li>
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Chapter Management</li>
                      </ul>
                   </nav>
                </div>
@@ -133,103 +132,58 @@
          <div id="content-page" class="content-page">
             <div class="container-fluid">
                <!-- Code ở đây -->
-               
-
+               <button id="btnAddCourse" type="button" class="btn btn-outline-primary mb-3"><i class="ion-plus-circled"></i><a href="themkhoahoc.html"> Add Cooperation</a></button>
                <div class="row">
-                  <div id="chapterinfo" class="col-lg-3">
-                        <div class="iq-card">
-                           <div class="iq-card-header d-flex justify-content-between">
-                              <div class="iq-header-title">
-                                 <h4 class="card-title">Chapter Name</h4>
-                              </div>
-                           </div>
-                           <div class="iq-card-body">
-                              <form>
-                                 <div class="form-group">                                 
-                                   <p></p>
+                  <div class="col-lg-12">
+                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                         <div class="iq-card-header d-flex justify-content-between">
+                            <div class="iq-header-title">
+                               <h4 class="card-title">Liên kết</h4>
+                            </div>
+                         </div>
+                         
+                         <div class="iq-card-body">
+                            <div class="table-responsive">
+                              <div class="d-block">
+                                 <div class="btn-group mt-3" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-success btn-primary">Valid</button>
+                                    <button type="button" class="btn btn-warning btn-primary">Pending</button>
+                                    <button type="button" class="btn btn-danger btn-primary">Invalid</button>
                                  </div>
-                 
-                              </form>
-                           </div>
-                        </div>
-                  </div>
-                  <div class="col-lg-9">
-                     <div class="iq-card">
-                           <div class="iq-card-header d-flex justify-content-between">
-                              <div class="iq-header-title">
-                                 <h4 class="card-title">List Lesson</h4>
                               </div>
-                           </div>
-                           <div id="listlesson" class="iq-card-body">
-                            <div id="table" class="table-editable">
-                              <span class="table-add float-right mb-3 mr-2">
-                                 <button onclick="addnewlesson()" class="btn btn-sm iq-bg-success"><i class="ion-plus-circled"></i>Add New Lesson</i>
-                                 </button>
-                              </span>
-                              <table class="table table-bordered table-responsive-md table-striped text-center">
-                                <thead>
-                                  <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Xem trước</th>
-                                    <th>Edit</th>
-                                    <th>Sort</th>
-                                    <th></th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                               
-                                </tbody>
-                              </table>
-                            </div>   
-                            <div class="row justify-content-between mt-3">
-                              <div id="user-list-page-info" class="col-md-6">
-                                 <span>Showing 1 to 5 of 5 entries</span>
-                              </div>
-                              <div class="col-md-6">
-                                 <nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-content-end mb-0">
-                                       <li class="page-item disabled">
-                                          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                                       </li>
-                                       <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                       <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                       <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                       <li class="page-item">
-                                          <a class="page-link" href="#">Next</a>
-                                       </li>
-                                    </ul>
-                                 </nav>
-                              </div>
-                           </div>                 
-                        </div>
-                     </div>
-               
-               </div>
-               
-         </div>
+                               <table class="table mb-0 table-borderless">
+                                  <thead>
+                                     <tr>
+                                        <th scope="col">Third-party App</th>
+                                        <th scope="col">Start Date</th>
+                                        <th scope="col">End Date</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Course</th>
+                                        <th scope="col">Delete</th>
 
-         <div id="previewframe" style="display: none !important;" class="row d-flex justify-content-end">
-            
-            <div class="col-lg-9 " >
-               <div class="iq-card">
-                  <div class="iq-card-header d-flex justify-content-between">
-                     <div class="iq-header-title">
-                        <h4 id="lessonName" class="card-title"></h4>
-                     </div>
-                  </div>
-                  <div class="iq-card-body">
-                     <div id="videoContainer" class="embed-responsive embed-responsive-16by9">
-                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen=""></iframe> -->
-                     </div>
+                                     </tr>
+                                  </thead>
+                                  <tbody class="tab-pane fade show active" id="valid" role="tabpanel" aria-labelledby="valid-tab">
+                                     <tr>
+                                        <td>aaa</td>
+                                        <td>26/12/2019</td>
+                                        <td>30/12/2019</td>
+                                        <td>
+                                           <div class="badge badge-pill badge-success">Valid</div>
+                                        </td>
+                                        <td>c++</td>
+                                        <td>
+                                          <span class="table-remove"><button onclick="remove()" type="button" class="btn iq-bg-danger btn-rounded btn-sm my-0">X</button></span>
+                                        </td>
+                                     </tr>
+                                  </tbody>
+                               </table>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+             </div>             
 
-                     <p id="lessonContent" style="margin-top: 1rem;"></p>
-
-                  </div>
-               </div>
-            </div>
-      </div>
                <!-- Đến đây -->
             </div>
          </div>
@@ -284,6 +238,7 @@
       <script src="js/chart-custom.js"></script>
       <!-- Custom JavaScript -->
       <script src="js/custom.js"></script>
-      <script src="script/ql_baihoc.js"></script>
+      <script src="script/ql_chuong.js"></script>
+
    </body>
 </html>

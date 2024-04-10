@@ -29,18 +29,42 @@ function addLesson(){
 
   formData.append('chapter_id', chapter_id);
 
-  if(inputVideo!=null){
+  if(inputVideo!=null && inputText == null){
     getUrl("video")
     .then(data => {
       console.log(data);
       uploadToS3(data.url,inputVideo)
       .then(()=>{
-        formData.append('videoUrl', title);
+        formData.append('videoUrl', data.fileName);
         addLessonToDB(formData)
         .then(data2 => console.log(data2))
       })
     })
   }
+  else if(inputVideo==null && inputText != null){
+    getUrl("text")
+    .then(data => {
+      console.log(data);
+      uploadToS3(data.url,inputVideo)
+      .then(()=>{
+        formData.append('textUrl', data.fileName);
+        addLessonToDB(formData)
+        .then(data2 => console.log(data2))
+      })
+    })
+  }
+  else if(inputVideo!=null && inputText != null){
+    getUrl("video")
+    .then(data => {
+      uploadToS3(data.url,inputVideo)
+      .then(()=>{
+        formData.append('videoUrl', data.fileName);
+        addLessonToDB(formData)
+        .then(data2 => console.log(data2))
+      })
+    })
+  }
+  
 
 
 }
