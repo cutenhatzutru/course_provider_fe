@@ -5,6 +5,7 @@ function getchapterbyid(){
   fetch('http://localhost:8080/download/chapter/getchapterbyid?id='+data1)
   .then(response => response.json())
   .then(data =>{
+    
     document.getElementById('chaptername').value = data.title;
     document.getElementById('chapterdescription').value = data.description;
     
@@ -26,8 +27,7 @@ function updatechapter() {
   let body_data ={
     "id":data1,
     "title":title,
-    "description":description,
-    "course_id":data1
+    "description":description
   }
 
 
@@ -44,7 +44,7 @@ function updatechapter() {
     .then(response => response.json()) // Chuyển đổi response sang định dạng JSON
     .then(data => {
       console.log(data)
-      window.location.href = "ql_chuong.html?data="+data1;
+      window.location.href = "ql_chuong.html?data="+data.course_id;
     })
     .catch(error => {
       console.error('Error:', error); // Log lỗi nếu có
