@@ -69,8 +69,8 @@
                   <h5 class="mb-0">LMS</h5>
                   <nav aria-label="breadcrumb">
                      <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="ql_khoahoc.html">Course</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Edit Course</li>
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Chapter Management</li>
                      </ul>
                   </nav>
                </div>
@@ -131,69 +131,60 @@
          <!-- Page Content  -->
          <div id="content-page" class="content-page">
             <div class="container-fluid">
-               <!-- Code ở đây -->
                <div class="row">
-            
-                <div class="col-lg-8">
-                   <div class="iq-edit-list-data">
-                      <div class="tab-content">
-                         <div class="tab-pane fade active show" id="personal-information" role="tabpanel">
-                             <div class="iq-card">
-                               <div class="iq-card-header d-flex justify-content-between">
-                                  <div class="iq-header-title">
-                                     <h4 class="card-title">Course Information</h4>
-                                  </div>
-                               </div>
-                               <div class="iq-card-body">
-                                  <form>
-                                     <div class="form-group row align-items-center">
-                                        <div class="col-md-12 text-center">
-                                           <div class="profile-img-edit">
-                                              <img  id="imageC" class="profile-pic" src="images/user/11.png" alt="profile-pic">
-                                              <div class="p-image">
-                                                <i class="ri-pencil-line upload-button"></i>
-                                                <input id="imageD" class="file-upload" type="file" accept="image/*">
-                                             </div>
-                                           </div>
-                                        </div>
-                                     </div>
-                                     
-                                           <div class="form-group col-sm-11">
-                                              <label  for="lblCourseName">Course Name</label>
-                                              <input id="lblCourseName" type="text" class="form-control"  placeholder="Name">
-                                           </div>
-
-                                            <div class="form-group col-sm-11">
-                                               <label  for="lblCourseDescription">Description</label>
-                                               <input  id="lblCourseDescription" type="text" class="form-control"  placeholder="Description">
-                                            </div>
-                                   
-                                          <div class="form-group col-sm-11">
-                                          <div class="custom-control custom-switch">
-                                             <input id="lblSwitch" type="checkbox" class="custom-control-input" id="customSwitch1">
-                                             <label class="custom-control-label" for="customSwitch1">Is published</label>
-                                          </div>
-                                    
-                                             
-                                               
-                                  </form>
-                                 </div>
-                                  <button onclick="updatecourse()" class="btn badge-success"><i class="las la-edit" ></i>Submit</button>
-                                  <button class="btn iq-bg-danger"><i class="fa-solid fa-xmark fa-fw"></i><a href="ql_khoahoc.html"> Cancel</a></button>
+                  <div class="col-lg-3">
+                      
+                  </div>
+               
+                  <div class="col-lg-9">
+                     <div class="iq-card">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title"> Add new Application</h4>
+                           </div>
+                        </div>
+                        <div class="iq-card-body">
+                           <div class="new-user-info">
+                              <form>
                                
-                            </div>
-                         </div>
-                                                 
-                      </div>
-                   </div>
-                </div>
-             </div>
+                                    <div class="form-group col-md-6">
+                                       <label for="fname">Author Name:</label>
+                                       <input id="appName" type="text" class="form-control" placeholder="Name">
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                       <label for="mobno">Description</label>
+                                       <input id="Address"type="text" class="form-control"  placeholder="Description">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="mobno">Email</label>
+                                        <input id="Email"type="text" class="form-control"  placeholder="Email">
+                                     </div>
+                                    
+                                    
+                                   </form>
+                                
+                                 <button id="addnewapp"type="submit" class="btn btn-outline-primary mb-3" onclick="addAuthor()">Add new Author</button>
+                              
+                         
+                           </div>
+                        </div>
+                     </div>
+               </div>
 
 
 
 
 
-               <!-- Đến đây -->
+
+
+
+
+
+
+         </div>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -212,7 +203,6 @@
                   Copyright 2020 <a href="#">Sofbox</a> All Rights Reserved.
                </div>
             </div>
-         </div>
          </div>
       </footer>
       <!-- Footer END -->
@@ -248,6 +238,83 @@
       <script src="js/chart-custom.js"></script>
       <!-- Custom JavaScript -->
       <script src="js/custom.js"></script>
-      <script src="script/suakhoahoc.js"></script>
-   </body>
+      <script src="script/themtacgia.js"></script>
+
+   <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
 </html>
