@@ -1,3 +1,4 @@
+
 function addcourse() {
   // Lấy reference đến form HTML
   
@@ -9,13 +10,15 @@ function addcourse() {
   formData.append('title', title);
 
   const description = document.getElementById('textDescriptionC').value;
-  console.log(description)
   formData.append('description', description);
 
   const isPublished = document.getElementById('customSwitch1').checked ? 1 : 0;
   console.log(isPublished);
 
   formData.append('isPublished', isPublished);
+
+  const author_id=document.getElementById('app_conn').value;
+  formData.append('author_id',author_id);
 
   // Lấy giá trị từ trường input file và thêm vào FormData
   const inputFile = document.getElementById('imageC').files[0];
@@ -35,3 +38,30 @@ function addcourse() {
       console.error('Error:', error); // Log lỗi nếu có
     });
 }
+
+
+function getAuthor() {
+
+    fetch('http://localhost:8080/authors/getall')
+    .then(response => response.json()) // Chuyển đổi response thành JSON
+    .then(data => {
+      console.log(data)
+        let html = "";
+        let authorSelect=document.getElementById('app_conn');
+        data.forEach(element => {
+            html += `
+            <option value="${element.id}">${element.name}</option>    
+            `;
+        }
+      
+      );
+       authorSelect.innerHTML+=html;
+       
+    })
+    .catch(error => {
+    console.error('Có lỗi xảy ra:', error);
+});
+}
+
+
+document.addEventListener('DOMContentLoaded',getAuthor);
