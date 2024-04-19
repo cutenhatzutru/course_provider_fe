@@ -1,8 +1,12 @@
 var urlParams = new URLSearchParams(window.location.search);
 var data1 = urlParams.get('data');
-
+const jwt = localStorage.getItem('jwt');
 function getcoursebyid(){
-  fetch('http://localhost:8080/download/course/getcoursebyid?id='+data1)
+  fetch('http://localhost:8080/download/course/getcoursebyid?id='+data1,{
+    headers: {
+      'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+    }
+  })
   .then(response => response.json())
   .then(data =>{
     document.getElementById('imageC').src = data.imageUrl;
@@ -41,6 +45,10 @@ function updatecourse() {
 
   fetch('http://localhost:8080/upload/course/update', {
     method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+      },
+    
     body: formData
   })
     .then(response => response.json()) // Chuyển đổi response sang định dạng JSON

@@ -1,8 +1,12 @@
 var urlParams = new URLSearchParams(window.location.search);
 var chapter_id = urlParams.get('data');
-
+const jwt = localStorage.getItem('jwt');
 function getUrl(type){
-    return fetch("http://localhost:8080/upload/lesson/getpreurl?type="+type)
+    return fetch("http://localhost:8080/upload/lesson/getpreurl?type="+type,{
+      headers: {
+        'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+      }
+    })
     .then(response => response.json())
     .then(data =>{
       return data;
@@ -92,6 +96,9 @@ function addLessonToDB(formData){
 
   return fetch('http://localhost:8080/upload/lesson/addlessontochapter', {
     method: 'POST',
+    headers:{
+      'Authorization': `Bearer ${jwt}`,
+    },
     body: formData
   })
     .then(response => response.json())

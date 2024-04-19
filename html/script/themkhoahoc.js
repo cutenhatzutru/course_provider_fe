@@ -1,4 +1,4 @@
-
+const jwt = localStorage.getItem('jwt');
 function addcourse() {
   // Lấy reference đến form HTML
   
@@ -27,6 +27,7 @@ function addcourse() {
   // Gửi request POST đến URL 'http://localhost:8080/upload/course/add' với body là formData
   fetch('http://localhost:8080/upload/course/add', {
     method: 'POST',
+    headers:{'Authorization': `Bearer ${jwt}`,},
     body: formData
   })
     .then(response => response.json()) // Chuyển đổi response sang định dạng JSON
@@ -42,7 +43,11 @@ function addcourse() {
 
 function getAuthor() {
 
-    fetch('http://localhost:8080/authors/getall')
+    fetch('http://localhost:8080/authors/getall',{
+      headers: {
+        'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+      }
+    })
     .then(response => response.json()) // Chuyển đổi response thành JSON
     .then(data => {
       console.log(data)

@@ -1,9 +1,13 @@
 var urlParams = new URLSearchParams(window.location.search);
    var data = urlParams.get('data');
-
+   const jwt = localStorage.getItem('jwt');
 function getChapter() {
    
-   fetch('http://localhost:8080/download/course/getcoursebyid?id='+data)
+   fetch('http://localhost:8080/download/course/getcoursebyid?id='+data,{
+    headers: {
+      'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+    }
+  })
        .then(response => response.json())
        .then(data => {
            let courseinfo = document.getElementById("courseinfo");
@@ -85,7 +89,10 @@ function remove(data) {
     const url = 'http://localhost:8080/upload/chapter/delete?id=' + data;
   
     fetch(url, {
-      method: 'DELETE'
+    method: 'DELETE',
+    headers: {
+        'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+    }
     })
     .then(response => {
       if (response.ok) {

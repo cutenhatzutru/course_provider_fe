@@ -132,7 +132,7 @@
          <div id="content-page" class="content-page">
             <div class="container-fluid">
                <!-- Code ở đây -->
-               <button id="btnAddCourse" type="button" class="btn btn-outline-primary mb-3"><i class="ion-plus-circled"></i><a href="themkhoahoc.html"> Add Cooperation</a></button>
+               <button id="btnAddCourse" type="button" class="btn btn-outline-primary mb-3"><i class="ion-plus-circled"></i><a href="themlienket.html"> Add Cooperation</a></button>
                <div class="row">
                   <div class="col-lg-12">
                       <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
@@ -146,9 +146,9 @@
                             <div class="table-responsive">
                               <div class="d-block">
                                  <div class="btn-group mt-3" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-success btn-primary">Valid</button>
-                                    <button type="button" class="btn btn-warning btn-primary">Pending</button>
-                                    <button type="button" class="btn btn-danger btn-primary">Invalid</button>
+                                    <button type="button" onclick="getTPA(1)" class="btn btn-success btn-primary">Valid</button>
+                                    <button type="button" onclick="getTPA(2)" class="btn btn-warning btn-primary">Pending</button>
+                                    <button type="button" onclick="getTPA(3)" class="btn btn-danger btn-primary">Invalid</button>
                                  </div>
                               </div>
                                <table class="table mb-0 table-borderless">
@@ -159,23 +159,11 @@
                                         <th scope="col">End Date</th>
                                         <th scope="col">Status</th>
                                         <th scope="col">Course</th>
-                                        <th scope="col">Delete</th>
 
                                      </tr>
                                   </thead>
-                                  <tbody class="tab-pane fade show active" id="valid" role="tabpanel" aria-labelledby="valid-tab">
-                                     <tr>
-                                        <td>aaa</td>
-                                        <td>26/12/2019</td>
-                                        <td>30/12/2019</td>
-                                        <td>
-                                           <div class="badge badge-pill badge-success">Valid</div>
-                                        </td>
-                                        <td>c++</td>
-                                        <td>
-                                          <span class="table-remove"><button onclick="remove()" type="button" class="btn iq-bg-danger btn-rounded btn-sm my-0">X</button></span>
-                                        </td>
-                                     </tr>
+                                  <tbody class="tab-pane fade show active" id="tpa" role="tabpanel" aria-labelledby="valid-tab">
+                                     
                                   </tbody>
                                </table>
                             </div>
@@ -238,7 +226,7 @@
       <script src="js/chart-custom.js"></script>
       <!-- Custom JavaScript -->
       <script src="js/custom.js"></script>
-      <script src="script/ql_chuong.js"></script>
+      <script src="script/ql_lienket.js"></script>
 
    </body>
 </html>

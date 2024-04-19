@@ -1,13 +1,18 @@
 var urlParams = new URLSearchParams(window.location.search);
 var chapter_id = urlParams.get('data');
 let preview_btn = 1;
+const jwt = localStorage.getItem('jwt');
 
 function getLesson() {
    var urlParams = new URLSearchParams(window.location.search);
    var data = urlParams.get('data');
    console.log(data);
  
-   fetch('http://localhost:8080/download/chapter/getchapterbyid?id='+ data)
+   fetch('http://localhost:8080/download/chapter/getchapterbyid?id='+ data,{
+    headers: {
+      'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+    }
+  })
      .then(response => response.json())
      .then(data => {
        let chapterinfo = document.getElementById("chapterinfo");
@@ -61,7 +66,10 @@ function getLesson() {
   const url = 'http://localhost:8080/upload/lesson/delete' + data;
   
   fetch(url, {
-    method: 'DELETE'
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+    }
   })
   .then(response => {
     if (response.ok) {
@@ -84,7 +92,11 @@ let addnewlesson = ()=>{
 function previewLesson(id){
   let frame = document.getElementById("previewframe")
   if(preview_btn === 1){
-    fetch("http://localhost:8080/download/lesson/getlessonbyid?id="+id)
+    fetch("http://localhost:8080/download/lesson/getlessonbyid?id="+id,{
+      headers: {
+        'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+      }
+    })
     .then(response => response.json())
     .then(data =>{
       frame.style.display = "block"

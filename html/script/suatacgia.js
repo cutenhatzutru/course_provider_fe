@@ -1,8 +1,12 @@
 var urlParams = new URLSearchParams(window.location.search);
 var data1 = urlParams.get('data');
-
+const jwt = localStorage.getItem('jwt');
 function getappbyid(){
-  fetch('http://localhost:8080/authors/getbyid?id='+data1)
+  fetch('http://localhost:8080/authors/getbyid?id='+data1,{
+    headers: {
+      'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+    }
+  })
   .then(response => response.json())
   .then(data =>{
     document.getElementById('appName').value= data.name;
@@ -32,6 +36,7 @@ function updateApp() {
     fetch('http://localhost:8080/authors/update', {
       method: 'PUT',
       headers: {
+        'Authorization': `Bearer ${jwt}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)

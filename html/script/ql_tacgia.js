@@ -1,9 +1,14 @@
+const jwt = localStorage.getItem('jwt');
 function show(){
     window.location.href="themtacgia.html";
 }
 function getAuthor() {
    
-    fetch('http://localhost:8080/authors/getall')
+    fetch('http://localhost:8080/authors/getall',{
+      headers: {
+        'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+      }
+    })
     .then(response => response.json()) // Chuyển đổi response thành JSON
     .then(data => {
         let html = "";
@@ -32,7 +37,11 @@ function remove(data1) {
     const url = 'http://localhost:8080/authors/delete?id=' + data1;
   
     fetch(url, {
-      method: 'DELETE'
+      method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+        }
+      
     })
     .then(response => {
       if (response.ok) {

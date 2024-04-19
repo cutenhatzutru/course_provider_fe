@@ -1,6 +1,6 @@
 var urlParams = new URLSearchParams(window.location.search);
    var data1 = urlParams.get('data');
-
+   const jwt = localStorage.getItem('jwt');
 function addchapter() {
 
     console.log(data)
@@ -21,6 +21,7 @@ function addchapter() {
     // Gửi request POST đến URL 'http://localhost:8080/upload/course/add' với body là formData
     fetch('http://localhost:8080/upload/chapter/addtocourse', {
       method: 'POST',
+      headers:{'Authorization': `Bearer ${jwt}`,},
       body: formData
     })
       .then(response => response.json()) // Chuyển đổi response sang định dạng JSON

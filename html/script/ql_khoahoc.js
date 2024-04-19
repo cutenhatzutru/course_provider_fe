@@ -1,8 +1,14 @@
-var urlParams = new URLSearchParams(window.location.search);
-var data = urlParams.get('data');
+const jwt = localStorage.getItem('jwt');
+
 function getCourse(){
    
-    fetch('http://localhost:8080/download/course/getallcourse')
+    fetch('http://localhost:8080/download/course/getallcourse', {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${jwt}`,
+      }
+    })
         .then(response => response.json()) // Chuyển đổi response thành JSON
         .then(data => {
             let html = "";
@@ -34,7 +40,11 @@ function xoakhoahoc(id){
     const url = 'http://localhost:8080/upload/course/delete?id=' + id;
   
     fetch(url, {
-      method: 'DELETE'
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${jwt}`
+      }
+      
     })
     .then(response => {
       if (response.ok) {

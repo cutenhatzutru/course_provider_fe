@@ -1,8 +1,12 @@
 var urlParams = new URLSearchParams(window.location.search);
 var data1 = urlParams.get('data');
-
+const jwt = localStorage.getItem('jwt');
 function getchapterbyid(){
-  fetch('http://localhost:8080/download/chapter/getchapterbyid?id='+data1)
+  fetch('http://localhost:8080/download/chapter/getchapterbyid?id='+data1,{
+    headers: {
+      'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+    }
+  })
   .then(response => response.json())
   .then(data =>{
     
@@ -37,7 +41,9 @@ function updatechapter() {
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json', 
-        'charset': 'utf-8'
+        'charset': 'utf-8',
+          'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
+        
       },
     body: JSON.stringify(body_data)
   })

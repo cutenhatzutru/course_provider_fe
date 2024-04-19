@@ -1,3 +1,4 @@
+const jwt = localStorage.getItem('jwt');
 function addApp() {
 
     const title = document.getElementById('appName').value;
@@ -13,6 +14,7 @@ const email = document.getElementById('Email').value;
     fetch('http://localhost:8080/tpa/add', {
       method: 'POST',
       headers: {
+        'Authorization': `Bearer ${jwt}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
