@@ -8,13 +8,15 @@ function getLesson() {
    var data = urlParams.get('data');
    console.log(data);
  
-   fetch('http://localhost:8080/download/chapter/getchapterbyid?id='+ data,{
+   fetch('http://localhost:8081/lesson/getlessonbychapter/'+ data,{
     headers: {
       'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
     }
   })
      .then(response => response.json())
-     .then(data => {
+     .then(data1 => {
+      data = data1.data;
+      console.log(data)
        let chapterinfo = document.getElementById("chapterinfo");
        let chapter = `<div class="iq-card">
          <div class="iq-card-header d-flex justify-content-between">
@@ -34,7 +36,7 @@ function getLesson() {
  
        let lstlesson = '';
        let listlesson = document.getElementById('listlesson');
-       data.lessons.forEach(element => {
+       data.forEach(element => {
          lstlesson += `<tr>
            <td contenteditable="true">${element.id}</td>
            <td contenteditable="true">${element.title}</td>
@@ -92,20 +94,20 @@ let addnewlesson = ()=>{
 function previewLesson(id){
   let frame = document.getElementById("previewframe")
   if(preview_btn === 1){
-    fetch("http://localhost:8080/download/lesson/getlessonbyid?id="+id,{
+    fetch("http://localhost:8081/lesson/getlessonbychapter/"+id,{
       headers: {
         'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
       }
     })
     .then(response => response.json())
-    .then(data =>{
+    .then(data => {
       frame.style.display = "block"
       
       document.getElementById("lessonName").innerText = data.title;
       if(data.videoUrl!=null){
         document.getElementById("videoContainer").innerHTML = `<iframe class="embed-responsive-item" src="${data.videoUrl}" allowfullscreen=""></iframe>`
       }
-      document.getElementById("lessonContent").innerText = data.content
+      document.getElementById("lessonContent").innerText = data.content;
     })
     preview_btn = 0 ;
   }

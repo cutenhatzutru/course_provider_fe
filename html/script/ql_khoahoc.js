@@ -1,65 +1,76 @@
 const jwt = localStorage.getItem('jwt');
 
-function getCourse(){
-   
-    fetch('http://localhost:8080/download/course/getallcourse', {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${jwt}`,
-      }
-    })
-        .then(response => response.json()) // Chuyển đổi response thành JSON
-        .then(data => {
-            let html = "";
-            let course_conn=document.getElementById('course_con');
-            data.forEach(element => {
-                html += `<div class="col-sm-4">
-                <div class="card iq-mb-3">
-                   <img src="${element.imageUrl}" class="card-img-top" alt="#">
-                   <div class="card-body">
-                      <h4 id="txtCourseName" class="card-title">${element.title}</h4>
-                      <p class="card-text">${element.description}</p>
-                        <div class="card-body">
-                         <button id="btnManageCourse" class="btn btnFullscreen"><i class="ri-bill-fill"></i><a href="ql_chuong.html?data=${element.id}" class="card-link">Manage</a></button>
-                         <button id="btnEditCourse" class="btn btnFullscreen"><i class="las la-edit" ></i><a href="suakhoahoc.html?data=${element.id}" class="card-link">Edit</a></button>
-                         <button id="btnDeleteCourse" class="btn btnFullscreen" onclick="xoakhoahoc(${element.id})"><i class="fa fa-trash"></i>Delete</button>
-                      </div>
-                   </div>
-                </div>
-             </div>`;
-            });
-            course_conn.innerHTML=html;
-        })
-        .catch(error => {
-        console.error('Có lỗi xảy ra:', error);
-    });
-      
-}
-function xoakhoahoc(id){
-    const url = 'http://localhost:8080/upload/course/delete?id=' + id;
-  
-    fetch(url, {
-      method: 'DELETE',
-      headers: {
-        'Authorization': `Bearer ${jwt}`
-      }
-      
+function getCourse(id) {
+    // if (!jwt) {
+    //     alert('Bạn cần đăng nhập để xem khóa học.');
+    //     return;
+    // }
+
+    fetch('http://localhost:8081/course/provider/'+1, {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${jwt}`,
+        }
     })
     .then(response => {
-      if (response.ok) {
-        getCourse();
-    } else {
-        console.error('Đã xảy ra lỗi khi xoá dữ liệu!');
-      }
+        if (!response.ok) {
+            throw new Error(`Lỗi: ${response.status} - ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then(data1 => {
+        data = data1.data;
+        console.log(data)
+        let html = "";
+        let course_conn = document.getElementById('course_con');
+        data.forEach(element => {
+            console.log(element)
+            const imageUrl = element.imageUrl || 'path/to/default-image.jpg';
+            html += `<div class="col-sm-4 mb-3">
+                        <div class="card">
+                            <img src="${imageUrl}" class="card-img-top" alt="${element.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${element.title}</h5>
+                                <p class="card-text">Price : ${element.price} VNĐ</p>
+                                <p class="card-text">${element.description}</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="ql_chuong.html?data=${element.id}" class="btn btn-primary">Manage</a>
+                                    <a href="suakhoahoc.html?data=${element.id}" class="btn btn-warning">Edit</a>
+                                    <button class="btn btn-danger" onclick="xoakhoahoc(${element.id})">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                     </div>`;
+        });
+        course_conn.innerHTML = html;
     })
     .catch(error => {
-      console.error('Đã xảy ra lỗi:', error);
+        console.error('Có lỗi xảy ra:', error);
+        alert('Không thể tải khóa học. Vui lòng kiểm tra kết nối và thử lại.');
     });
-      
 }
 
+function xoakhoahoc(id) {
+    const url = 'http://localhost:8081/course/delete/' + id;
 
+    fetch(url, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${jwt}`
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            getCourse();
+        } else {
+            throw new Error(`Lỗi: ${response.status} - ${response.statusText}`);
+        }
+    })
+    .catch(error => {
+        console.error('Đã xảy ra lỗi:', error);
+        alert('Không thể xóa khóa học. Vui lòng kiểm tra và thử lại.');
+    });
+}
 
-document.addEventListener('DOMContentLoaded',getCourse);
-
+document.addEventListener('DOMContentLoaded', getCourse);

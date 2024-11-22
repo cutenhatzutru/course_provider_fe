@@ -2,16 +2,15 @@ var urlParams = new URLSearchParams(window.location.search);
 var data1 = urlParams.get('data');
 const jwt = localStorage.getItem('jwt');
 function getchapterbyid(){
-  fetch('http://localhost:8080/download/chapter/getchapterbyid?id='+data1,{
+  fetch('http://localhost:8081/chapter/'+data1,{
     headers: {
       'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
     }
   })
   .then(response => response.json())
-  .then(data =>{
-    
-    document.getElementById('chaptername').value = data.title;
-    document.getElementById('chapterdescription').value = data.description;
+  .then(data1 =>{
+    document.getElementById('chaptername').value = data1.data.title;
+    document.getElementById('chapterdescription').value = data1.data.description;
     
   })
   .catch(error => {
@@ -36,7 +35,7 @@ function updatechapter() {
 
 
   // Gửi request POST đến URL 'http://localhost:8080/upload/course/add' với body là formData
-  fetch('http://localhost:8080/upload/chapter/update', {
+  fetch('http://localhost:8081/chapter/update', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
@@ -48,9 +47,10 @@ function updatechapter() {
     body: JSON.stringify(body_data)
   })
     .then(response => response.json()) // Chuyển đổi response sang định dạng JSON
-    .then(data => {
-      console.log(data)
-      window.location.href = "ql_chuong.html?data="+data.course_id;
+    .then(data2 => {
+      data1=data2.data;
+  
+     // window.location.href = "ql_chuong.html?data="+data1.course_id;
     })
     .catch(error => {
       console.error('Error:', error); // Log lỗi nếu có
