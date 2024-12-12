@@ -4,7 +4,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Sofbox - Responsive Bootstrap 4 Admin Dashboard Template</title>
+      <title>UTC's Provider</title>
       <!-- Favicon -->
       <link rel="shortcut icon" href="images/favicon.ico" />
       <!-- Bootstrap CSS -->
@@ -15,6 +15,7 @@
       <link rel="stylesheet" href="css/style.css">
       <!-- Responsive CSS -->
       <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    </head>
    <body>
       <!-- Wrapper Start -->
@@ -23,8 +24,8 @@
          <div class="iq-sidebar">
             <div class="iq-sidebar-logo d-flex justify-content-between">
                <a href="index.html">
-               <img src="images/logo.png" class="img-fluid" alt="">
-               <span>Hieu&Yen</span>
+               <img src="images/utc.jpg" class="img-fluid" alt="">
+               <span>UTC's Provider</span>
                </a>
                <div class="iq-menu-bt align-self-center">
                   <div class="wrapper-menu">
@@ -40,7 +41,7 @@
                      <li class="iq-menu-title"><i class="ri-separator"></i><span>Main</span></li>
                      <li><a href="index.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Dashboard</span></a></li>
                      <li class="active"><a href="#ql_khoahoc" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý khóa học</span></a></li>
-                     <li><a href="ql_ungdung.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Báo cáo thống kê</span></a></li>
+                     <li><a href="index.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Báo cáo thống kê</span></a></li>
                      <li><a href="todo.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý liên kết</span></a></li>
                      <li>
                         <a href="#user-info" class="iq-waves-effect collapsed"  data-toggle="collapse" aria-expanded="false"><i class="ri-user-line"></i><span>Quản lý tài nguyên</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
@@ -60,16 +61,16 @@
                   <div class="top-logo">
                      <a href="index.html" class="logo">
                      <img src="images/utc.jpg" class="img-fluid" alt="">
-                     <span>LMS</span>
+                     <span>UTC's Provider</span>
                      </a>
                   </div>
                </div>
                <div class="navbar-breadcrumb">
-                  <h5 class="mb-0">LMS</h5>
+                  <h5 class="mb-0">UTC's Provider</h5>
                   <nav aria-label="breadcrumb">
                      <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Add Lesson</li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-book"></i>  Home </a></li>
+                        <li class="breadcrumb-item-active" id="coursemanagement" aria-current="page"> > Course Management</li>
                      </ul>
                   </nav>
                </div>
@@ -85,19 +86,11 @@
                      </div>
                   </div>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     <ul class="navbar-nav ml-auto navbar-list">
-                        <li class="nav-item">
-                           <a class="search-toggle iq-waves-effect" href="#"><i class="ri-search-line"></i></a>
-                           <form action="#" class="search-box">
-                              <input type="text" class="text search-input" placeholder="Type here to search..." />
-                           </form>
-                        </li>
-                        <li class="nav-item iq-full-screen"><a href="#" class="iq-waves-effect" id="btnFullscreen"><i class="ri-fullscreen-line"></i></a></li>
-                     </ul>
+                    
                   </div>
                   <ul class="navbar-list">
                      <li>
-                        <a href="#" class="search-toggle iq-waves-effect bg-primary text-white"><img src="images/user/1.jpg" class="img-fluid rounded" alt="user"></a>
+                        <a href="#" class="search-toggle iq-waves-effect bg-primary text-white"><img src="images/user/01.jpg" class="img-fluid rounded" alt="user"></a>
                         <div class="iq-sub-dropdown iq-user-dropdown">
                            <div class="iq-card iq-card-block iq-card-stretch iq-card-height shadow-none m-0">
                               <div class="iq-card-body p-0 ">
@@ -119,6 +112,7 @@
                                     <a class="iq-bg-danger iq-sign-btn" href="sign-in.html" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
                                  </div>
                               </div>
+                              
                            </div>
                         </div>
                      </li>
@@ -153,7 +147,7 @@
                         </div>
                   </div>
                
-                  <div class="col-lg-9">
+                  <div class="col-lg-8">
                      <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
@@ -173,7 +167,7 @@
                                        <label for="mobno">Desciption:</label>
                                        <input id="textDescriptionC" type="text" class="form-control" id="mobno" placeholder="Description">
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-12">
                                        <label for="mobno">Content:</label>
                                        <textarea id="textContent" class="form-control" id="mobno" placeholder="Content"></textarea>
                                     </div>
@@ -190,7 +184,7 @@
                                     </div>
                                    </form>
                                 
-                                 <button onclick="addLesson()" type="submit" class="btn btn-outline-primary mb-3">Add new lesson</button>
+                                 <button id="btnAddnewlesson" onclick="addLesson()" type="submit" class="btn btn-outline-primary mb-3"> <i class="fas fa-plus"></i>Add new lesson</button>
                               
                          
                            </div>

@@ -4,7 +4,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Sofbox - Responsive Bootstrap 4 Admin Dashboard Template</title>
+      <title>UTC's Provider</title>
       <!-- Favicon -->
       <link rel="shortcut icon" href="images/favicon.ico" />
       <!-- Bootstrap CSS -->
@@ -37,12 +37,28 @@
             <div id="sidebar-scrollbar">
                <nav class="iq-sidebar-menu">
                   <ul id="iq-sidebar-toggle" class="iq-menu">
-                     <li class="iq-menu-title"><i class="ri-separator"></i><span>Main</span></li>
-                     <li class="active"><a href="#index" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Dashboard</span></a></li>
-                     <li><a href="ql_khoahoc.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý khóa học</span></a></li>
-                     <li><a href="ql_ungdung.html" class="iq-waves-effect"><i class="ri-chat-check-line" ></i><span>Báo cáo thống kê</span></a></li>
-                     <li><a href="ql_lienket.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý liên kết</span></a></li>
-                  </ul>
+                     <li class="active">
+                         <a href="ql_khoahoc.html" class="iq-waves-effect">
+                             <i class="ri-chat-check-line"></i><span>Quản lý khóa học</span>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="index.html" class="iq-waves-effect">
+                             <i class="ri-chat-check-line"></i><span>Báo cáo thống kê</span>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="todo.html" class="iq-waves-effect">
+                             <i class="ri-chat-check-line"></i><span>Quản lý liên kết</span>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#user-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false">
+                             <i class="ri-user-line"></i><span>Quản lý tài nguyên</span>
+                             <i class="ri-arrow-right-s-line iq-arrow-right"></i>
+                         </a>
+                     </li>
+                 </ul>
                </nav>
                <div class="p-3"></div>
             </div>
@@ -53,17 +69,17 @@
                <div class="iq-sidebar-logo">
                   <div class="top-logo">
                      <a href="index.html" class="logo">
-                     <img src="images/logo.png" class="img-fluid" alt="">
-                     <span>Sofbox</span>
+                     <img src="images/utc.jpg" class="img-fluid" alt="">
+                     <span>UTC's Provider</span>
                      </a>
                   </div>
                </div>
                <div class="navbar-breadcrumb">
-                  <h5 class="mb-0">Dashboard</h5>
+                  <h5 class="mb-0">UTC's Provider</h5>
                   <nav aria-label="breadcrumb">
                      <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-book"></i>  Home </a></li>
+                        <li class="breadcrumb-item-active" id="coursemanagement" aria-current="page"> > Course Management</li>
                      </ul>
                   </nav>
                </div>
@@ -79,15 +95,7 @@
                      </div>
                   </div>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     <ul class="navbar-nav ml-auto navbar-list">
-                        <li class="nav-item">
-                           <a class="search-toggle iq-waves-effect" href="#"><i class="ri-search-line"></i></a>
-                           <form action="#" class="search-box">
-                              <input type="text" class="text search-input" placeholder="Type here to search..." />
-                           </form>
-                        </li>
-                        <li class="nav-item iq-full-screen"><a href="#" class="iq-waves-effect" id="btnFullscreen"><i class="ri-fullscreen-line"></i></a></li>
-                     </ul>
+                    
                   </div>
                   <ul class="navbar-list">
                      <li>
@@ -113,6 +121,7 @@
                                     <a class="iq-bg-danger iq-sign-btn" href="sign-in.html" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
                                  </div>
                               </div>
+                              
                            </div>
                         </div>
                      </li>
@@ -125,232 +134,69 @@
          <div id="content-page" class="content-page">
             <div class="container-fluid">
                <div class="row">
-                  <div class="col-md-6 col-lg-3">
-                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
-                        <div class="iq-card-body pb-0">
-                           <div class="rounded-circle iq-card-icon iq-bg-primary"><i class="ri-exchange-dollar-fill"></i></div>
-                           <span class="float-right line-height-6">Net Worth</span>
-                           <div class="clearfix"></div>
-                           <div class="text-center">
-                              <h2 class="mb-0"><span class="counter">65</span><span>M</span></h2>
-                              <p class="mb-0 text-secondary line-height"><i class="ri-arrow-up-line text-success mr-1"></i><span class="text-success">10%</span> Increased</p>
-                           </div>
-                        </div>
-                        <div id="chart-1"></div>
-                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
-                        <div class="iq-card-body pb-0">
-                           <div class="rounded-circle iq-card-icon iq-bg-warning"><i class="ri-bar-chart-grouped-line"></i></div>
-                           <span class="float-right line-height-6">Todays Gains</span>
-                           <div class="clearfix"></div>
-                           <div class="text-center">
-                              <h2 class="mb-0"><span>$</span><span class="counter">4500</span></h2>
-                              <p class="mb-0 text-secondary line-height"><i class="ri-arrow-up-line text-success mr-1"></i><span class="text-success">20%</span> Increased</p>
-                           </div>
-                        </div>
-                        <div id="chart-2"></div>
-                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
-                        <div class="iq-card-body pb-0">
-                           <div class="rounded-circle iq-card-icon iq-bg-success"><i class="ri-group-line"></i></div>
-                           <span class="float-right line-height-6">Total Users</span>
-                           <div class="clearfix"></div>
-                           <div class="text-center">
-                              <h2 class="mb-0"><span class="counter">96.6</span><span>K</span></h2>
-                              <p class="mb-0 text-secondary line-height"><i class="ri-arrow-up-line text-success mr-1"></i><span class="text-success">30%</span> Increased</p>
-                           </div>
-                        </div>
-                        <div id="chart-3"></div>
-                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
-                        <div class="iq-card-body pb-0">
-                           <div class="rounded-circle iq-card-icon iq-bg-danger"><i class="ri-shopping-cart-line"></i></div>
-                           <span class="float-right line-height-6">Orders Received</span>
-                           <div class="clearfix"></div>
-                           <div class="text-center">
-                              <h2 class="mb-0"><span class="counter">15.5</span><span>K</span></h2>
-                              <p class="mb-0 text-secondary line-height"><i class="ri-arrow-down-line text-danger mr-1"></i><span class="text-danger">10%</span> Increased</p>
-                           </div>
-                        </div>
-                        <div id="chart-4"></div>
-                     </div>
-                  </div>
-                  <div class="col-lg-8">
-                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
-                        <div class="iq-card-header d-flex justify-content-between">
-                           <div class="iq-header-title">
-                              <h4 class="card-title">Monthly sales trend </h4>
-                           </div>
-                           <div class="iq-card-header-toolbar d-flex align-items-center">
-                              <ul class="nav nav-pills">
-                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">Latest</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Month</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">All Time</a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div class="iq-card-body">
-                           <div class="d-flex justify-content-around">
-                              <div class="price-week-box mr-5">
-                                 <span>Current Week</span>
-                                 <h2>$<span class="counter">180</span> <i class="ri-funds-line text-success font-size-18"></i></h2>
+                  <div class="col-md-6 col-lg-4">
+                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
+                          <div class="iq-card-body pb-0">
+                              <div class="rounded-circle iq-bg-primary"><i class="ri-exchange-dollar-fill"></i></div>
+                              <span class="float-right line-height-6">Khóa học</span>
+                              <div class="clearfix"></div>
+                              <div class="text-center">
+                                  <h2 class="mb-0"><span id="courseCount">0</span></h2>
+                                  <p class="mb-0 text-secondary line-height"><i class="ri-arrow-up-line text-success mr-1"></i><span class="text-success" id="courseIncrease">0%</span> Increased</p>
                               </div>
-                              <div class="price-week-box">
-                                 <span>Previous Week</span>
-                                 <h2>$<span class="counter">52.55</span><i class="ri-funds-line text-danger font-size-18"></i></h2>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
+                          <div class="iq-card-body pb-0">
+                              <div class="rounded-circle iq-bg-warning"><i class="ri-bar-chart-grouped-line"></i></div>
+                              <span class="float-right line-height-6">Số người đăng ký</span>
+                              <div class="clearfix"></div>
+                              <div class="text-center">
+                                  <h2 class="mb-0"><span id="studentCount">0</span></h2>
+                                  <p class="mb-0 text-secondary line-height"><i class="ri-arrow-up-line text-success mr-1"></i><span class="text-success" id="studentIncrease">0%</span> Increased</p>
                               </div>
-                           </div>
-                        </div>
-                        <div id="chart-5"></div>
-                     </div>
+                          </div>
+                      </div>
                   </div>
-                  <div class="col-lg-4">
-                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height animation-card">
-                        <div class="iq-card-body p-0">
-                           <div class="an-text">
-                              <span>Quarterly Target </span>
-                              <h2 class="display-4 font-weight-bold">$<span>2M</span></h2>
-                           </div>
-                           <div class="an-img">
-                              <div class="bodymovin" data-bm-path="images/small/data.json" data-bm-renderer="svg" data-bm-loop="true"></div>
-                           </div>
-                        </div>
-                     </div>
+                  <div class="col-md-6 col-lg-4">
+                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
+                          <div class="iq-card-body pb-0">
+                              <div class="rounded-circle iq-bg-success"><i class="ri-group-line"></i></div>
+                              <span class="float-right line-height-6">Doanh thu</span>
+                              <div class="clearfix"></div>
+                              <div class="text-center">
+                                  <h2 class="mb-0"><span id="revenueCount">0</span></h2>
+                                  <p class="mb-0 text-secondary line-height"><i class="ri-arrow-up-line text-success mr-1"></i><span class="text-success" id="revenueIncrease">0%</span> Increased</p>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-               </div>
+              </div>
+              
                <div class="row">
-                  <div class="col-lg-8">
-                     <div class="iq-card">
-                        <div class="iq-card-header d-flex justify-content-between">
-                           <div class="iq-header-title">
-                              <h4 class="card-title">Top Grossing</h4>
-                           </div>
-                           <div class="iq-card-header-toolbar d-flex align-items-center">
-                              <div class="dropdown">
-                                 <span class="dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown">
-                                 <i class="ri-more-2-fill"></i>
-                                 </span>
-                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Print</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="iq-card-body">
-                           <div class="row">
-                              <div class="col-sm-8">
-                                 <div class="media-sellers">
-                                    <div class="media-sellers-img">
-                                       <img src="images/page-img/01.jpg" class="mr-3 rounded" alt="">
-                                    </div>
-                                    <div class="media-sellers-media-info">
-                                       <h5 class="mb-0"><a class="text-dark" href="#">Android Tablet</a></h5>
-                                       <p class="mb-1">Android 10 supported tablet with best features.</p>
-                                       <div class="sellers-dt">
-                                          <span class="font-size-12">Vendor: <a href="#"> iqonicdesign</a></span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-sm-2 text-center mt-3">
-                                 <h5 class="mb-0">20,019</h5>
-                                 <span>Sales</span>
-                              </div>
-                              <div class="col-sm-2 text-center mt-3">
-                                 <ul class="list-inline mb-0 list-star">
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                 </ul>
-                                 <span>Rating</span>
-                              </div>
-                           </div>
-                           <div class="row mt-4">
-                              <div class="col-sm-8">
-                                 <div class="media-sellers">
-                                    <div class="media-sellers-img">
-                                       <img src="images/page-img/02.jpg" class="mr-3 rounded" alt="">
-                                    </div>
-                                    <div class="media-sellers-media-info">
-                                       <h5 class="mb-0"><a class="text-dark" href="#">Apple Watch</a></h5>
-                                       <p class="mb-1">Latest model of apple watch for productivity.</p>
-                                       <div class="sellers-dt">
-                                          <span class="font-size-12">Vendor: <a href="#">Apple</a></span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-sm-2 text-center mt-3">
-                                 <h5 class="mb-0">56,112</h5>
-                                 <span>Sales</span>
-                              </div>
-                              <div class="col-sm-2 text-center mt-3">
-                                 <ul class="list-inline mb-0 list-star">
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                 </ul>
-                                 <span>Rating</span>
-                              </div>
-                           </div>
-                           <div class="row mt-4">
-                              <div class="col-sm-8">
-                                 <div class="media-sellers">
-                                    <div class="media-sellers-img">
-                                       <img src="images/page-img/03.jpg" class="mr-3 rounded" alt="">
-                                    </div>
-                                    <div class="media-sellers-media-info">
-                                       <h5 class="mb-0"><a class="text-dark" href="#">I-Phone & I-Mac</a></h5>
-                                       <p class="mb-1">Best ever combo package for work and personal use.</p>
-                                       <div class="sellers-dt">
-                                          <span class="font-size-12">Vendor: <a href="#"> Iqonic devices</a></span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-sm-2 text-center mt-3">
-                                 <h5 class="mb-0">9,895</h5>
-                                 <span>Sales</span>
-                              </div>
-                              <div class="col-sm-2 text-center mt-3">
-                                 <ul class="list-inline mb-0 list-star">
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                    <li class="list-inline-item text-warning"><i class="ri-star-fill"></i></li>
-                                 </ul>
-                                 <span>Rating</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                  <div class="col-lg-12">
+                     <div class="container" id="bodykhoahocnoibat">
+                        <h2 class="text-center">Khóa Học Nổi Bật</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Course Name</th>
+                                    <th>Sales</th>
+                                </tr>
+                            </thead>
+                            <tbody id="course-containernhe">
+                                <!-- Khóa học sẽ được thêm vào đây bởi JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
                      <div class="row">
                         <div class="col-lg-6">
                            <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
                               <div class="iq-card-header d-flex justify-content-between">
                                  <div class="iq-header-title">
-                                    <h4 class="card-title">Support Tickets</h4>
+                                    <h4 class="card-title">Learner's Top</h4>
                                  </div>
                                  <div class="iq-card-header-toolbar d-flex align-items-center">
                                     <div class="dropdown">
@@ -504,229 +350,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-lg-4">
-                     <div class="iq-card">
-                        <div class="iq-card-header d-flex justify-content-between">
-                           <div class="iq-header-title">
-                              <h4 class="card-title">Activity timeline</h4>
-                           </div>
-                           <div class="iq-card-header-toolbar d-flex align-items-center">
-                              <div class="dropdown">
-                                 <span class="dropdown-toggle text-primary" id="dropdownMenuButton4" data-toggle="dropdown">
-                                 View All
-                                 </span>
-                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Print</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="iq-card-body">
-                           <ul class="iq-timeline">
-                              <li>
-                                 <div class="timeline-dots"></div>
-                                 <h6 class="float-left mb-1">Client Login</h6>
-                                 <small class="float-right mt-1">24 November 2019</small>
-                                 <div class="d-inline-block w-100">
-                                    <p>Bonbon macaroon jelly beans gummi bears jelly lollipop apple</p>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="timeline-dots border-success"></div>
-                                 <h6 class="float-left mb-1">Scheduled Maintenance</h6>
-                                 <small class="float-right mt-1">23 November 2019</small>
-                                 <div class="d-inline-block w-100">
-                                    <p>Bonbon macaroon jelly beans gummi bears jelly lollipop apple</p>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="timeline-dots border-danger"></div>
-                                 <h6 class="float-left mb-1">Dev Meetup</h6>
-                                 <small class="float-right mt-1">20 November 2019</small>
-                                 <div class="d-inline-block w-100">
-                                    <p>Bonbon macaroon jelly beans <a href="#">gummi bears</a>gummi bears jelly lollipop apple</p>
-                                    <div class="iq-media-group">
-                                       <a href="#" class="iq-media">
-                                       <img class="img-fluid avatar-40 rounded-circle" src="images/user/05.jpg" alt="">
-                                       </a>
-                                       <a href="#" class="iq-media">
-                                       <img class="img-fluid avatar-40 rounded-circle" src="images/user/06.jpg" alt="">
-                                       </a>
-                                       <a href="#" class="iq-media">
-                                       <img class="img-fluid avatar-40 rounded-circle" src="images/user/07.jpg" alt="">
-                                       </a>
-                                       <a href="#" class="iq-media">
-                                       <img class="img-fluid avatar-40 rounded-circle" src="images/user/08.jpg" alt="">
-                                       </a>
-                                       <a href="#" class="iq-media">
-                                       <img class="img-fluid avatar-40 rounded-circle" src="images/user/09.jpg" alt="">
-                                       </a>
-                                       <a href="#" class="iq-media">
-                                       <img class="img-fluid avatar-40 rounded-circle" src="images/user/10.jpg" alt="">
-                                       </a>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="timeline-dots border-primary"></div>
-                                 <h6 class="float-left mb-1">Client Call</h6>
-                                 <small class="float-right mt-1">19 November 2019</small>
-                                 <div class="d-inline-block w-100">
-                                    <p>Bonbon macaroon jelly beans gummi bears jelly lollipop apple</p>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="timeline-dots border-warning"></div>
-                                 <h6 class="float-left mb-1">Mega event</h6>
-                                 <small class="float-right mt-1">15 November 2019</small>
-                                 <div class="d-inline-block w-100">
-                                    <p>Bonbon macaroon jelly beans gummi bears jelly lollipop apple</p>
-                                 </div>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="iq-card">
-                        <img src="images/small/img-1.jpg" class="img-fluid w-100 rounded" alt="#">
-                        <div class="iq-card-header d-flex justify-content-between">
-                           <div class="iq-header-title">
-                              <h4 class="card-title">How to setup E-store</h4>
-                           </div>
-                           <div class="iq-card-header-toolbar d-flex align-items-center">
-                              <div class="dropdown">
-                                 <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
-                                 <i class="ri-settings-5-fill"></i>
-                                 </span>
-                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="iq-card-body">
-                           <span class="font-size-16">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-                           <small class="text-muted mt-3 d-inline-block w-100">Saturday, 7 December 2019</small>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-12">
-                     <div class="iq-card">
-                        <div class="iq-card-header d-flex justify-content-between">
-                           <div class="iq-header-title">
-                              <h4 class="card-title">Order Summary</h4>
-                           </div>
-                           <div class="iq-card-header-toolbar d-flex align-items-center">
-                              <div class="dropdown">
-                                 <span class="dropdown-toggle text-primary" id="dropdownMenuButton5" data-toggle="dropdown">
-                                 <i class="ri-more-2-fill"></i>
-                                 </span>
-                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Print</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="iq-card-body">
-                           <div class="table-responsive">
-                              <table class="table mb-0 table-borderless">
-                                 <thead>
-                                    <tr>
-                                       <th scope="col">Package No.</th>
-                                       <th scope="col">Date</th>
-                                       <th scope="col">Delivery</th>
-                                       <th scope="col">Status</th>
-                                       <th scope="col">Location</th>
-                                       <th scope="col">Progress</th>
-
-                                    </tr>
-                                 </thead>
-                                 <tbody>
-                                    <tr>
-                                       <td>#0879985</td>
-                                       <td>26/12/2019</td>
-                                       <td>30/12/2019</td>
-                                       <td>
-                                          <div class="badge badge-pill badge-success">Moving</div>
-                                       </td>
-                                       <td>Victoria 8007 Australia</td>
-                                       <td>
-                                          <div class="iq-progress-bar">
-                                             <span class="bg-success" data-percent="90"></span>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>#0879984</td>
-                                       <td>23/12/2019</td>
-                                       <td>27/12/2019</td>
-                                       <td>
-                                          <div class="badge badge-pill badge-warning text-white">Pending</div>
-                                       </td>
-                                       <td>Athens 2745 Greece</td>
-                                       <td>
-                                          <div class="iq-progress-bar">
-                                             <span class="bg-warning" data-percent="70"></span>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>#0879983</td>
-                                       <td>18/12/2019</td>
-                                       <td>21/12/2019</td>
-                                       <td>
-                                          <div class="badge badge-pill badge-danger">Canceled</div>
-                                       </td>
-                                       <td>Victoria 8007 Australia</td>
-                                       <td>
-                                          <div class="iq-progress-bar">
-                                             <span class="bg-danger" data-percent="48"></span>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>#0879982</td>
-                                       <td>14/12/2019</td>
-                                       <td>20/12/2019</td>
-                                       <td>
-                                          <div class="badge badge-pill badge-info">Working</div>
-                                       </td>
-                                       <td>Delhi 0014 India</td>
-                                       <td>
-                                          <div class="iq-progress-bar">
-                                             <span class="bg-info" data-percent="90"></span>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>#0879981</td>
-                                       <td>10/12/2019</td>
-                                       <td>18/12/2019</td>
-                                       <td>
-                                          <div class="badge badge-pill badge-success">Moving</div>
-                                       </td>
-                                       <td>Alabama 2741 USA</td>
-                                       <td>
-                                          <div class="iq-progress-bar">
-                                             <span class="bg-success" data-percent="45"></span>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                 </tbody>
-                              </table>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+            
                </div>
             </div>
          </div>
@@ -781,5 +405,8 @@
       <script src="js/chart-custom.js"></script>
       <!-- Custom JavaScript -->
       <script src="js/custom.js"></script>
+      <script src="script/index.js"></script>
+
+
    </body>
 </html>

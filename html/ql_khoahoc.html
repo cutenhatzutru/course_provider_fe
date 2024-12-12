@@ -15,6 +15,8 @@
       <link rel="stylesheet" href="css/style.css">
       <!-- Responsive CSS -->
       <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
    </head>
    <body>
       <!-- Wrapper Start -->
@@ -34,24 +36,29 @@
                   </div>
                </div>
             </div>
-            <div id="sidebar-scrollbar">
-               <nav class="iq-sidebar-menu">
-                  <ul id="iq-sidebar-toggle" class="iq-menu">
-                     <li class="iq-menu-title"><i class="ri-separator"></i><span>Main</span></li>
-                     <li class="active"><a href="#ql_khoahoc" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý khóa học</span></a></li>
-                     <li><a href="ql_ungdung.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Báo cáo thống kê</span></a></li>
-                     <li><a href="todo.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Quản lý liên kết</span></a></li>
-                     <li>
-                        <a href="#user-info" class="iq-waves-effect collapsed"  data-toggle="collapse" aria-expanded="false"><i class="ri-user-line"></i><span>Quản lý tài nguyên</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="user-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="ql_docgia.html">Quản lý tác giả</a></li>
-                     
-                        </ul>
-                     </li>
-                  </ul>
-               </nav>
-               <div class="p-3"></div>
-            </div>
+            <ul id="iq-sidebar-toggle" class="iq-menu">
+               <li class="active">
+                   <a href="#ql_khoahoc" class="iq-waves-effect">
+                       <i class="ri-chat-check-line"></i><span>Quản lý khóa học</span>
+                   </a>
+               </li>
+               <li>
+                   <a href="index.html" class="iq-waves-effect">
+                       <i class="ri-chat-check-line"></i><span>Báo cáo thống kê</span>
+                   </a>
+               </li>
+               <li>
+                   <a href="todo.html" class="iq-waves-effect">
+                       <i class="ri-chat-check-line"></i><span>Quản lý liên kết</span>
+                   </a>
+               </li>
+               <li>
+                   <a href="#user-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false">
+                       <i class="ri-user-line"></i><span>Quản lý tài nguyên</span>
+                       <i class="ri-arrow-right-s-line iq-arrow-right"></i>
+                   </a>
+               </li>
+           </ul>
          </div>
          <!-- TOP Nav Bar -->
          <div class="iq-top-navbar">
@@ -59,17 +66,17 @@
                <div class="iq-sidebar-logo">
                   <div class="top-logo">
                      <a href="index.html" class="logo">
-                     <img src="images/logo.png" class="img-fluid" alt="">
-                     <span>LMS</span>
+                     <img src="images/utc.jpg" class="img-fluid" alt="">
+                     <span>UTC's Provider</span>
                      </a>
                   </div>
                </div>
                <div class="navbar-breadcrumb">
-                  <h5 class="mb-0">LMS</h5>
+                  <h5 class="mb-0">UTC's Provider</h5>
                   <nav aria-label="breadcrumb">
                      <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Course Management</li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-book"></i>  Home </a></li>
+                        <li class="breadcrumb-item-active" id="coursemanagement" aria-current="page"> > Course Management</li>
                      </ul>
                   </nav>
                </div>
@@ -157,13 +164,13 @@
       <footer class="bg-white iq-footer">
          <div class="container-fluid">
             <div class="row">
-               <div class="col-lg-6">
+               <div class="col-lg-12">
                   <ul class="list-inline mb-0">
                      <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
                      <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
                   </ul>
                </div>
-               <div class="col-lg-6 text-right">
+               <div class="col-lg-12 text-right">
                   Copyright 2020 <a href="#">Sofbox</a> All Rights Reserved.
                </div>
             </div>

@@ -27,21 +27,27 @@ function getCourse(id) {
         data.forEach(element => {
             console.log(element)
             const imageUrl = element.imageUrl || 'path/to/default-image.jpg';
-            html += `<div class="col-sm-4 mb-3">
-                        <div class="card">
-                            <img src="${imageUrl}" class="card-img-top" alt="${element.title}">
-                            <div class="card-body">
-                                <h5 class="card-title">${element.title}</h5>
-                                <p class="card-text">Price : ${element.price} VNĐ</p>
-                                <p class="card-text">${element.description}</p>
-                                <div class="d-flex justify-content-between">
-                                    <a href="ql_chuong.html?data=${element.id}" class="btn btn-primary">Manage</a>
-                                    <a href="suakhoahoc.html?data=${element.id}" class="btn btn-warning">Edit</a>
-                                    <button class="btn btn-danger" onclick="xoakhoahoc(${element.id})">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-                     </div>`;
+            html += `<div class="col-sm-3 mb-4">
+            <div class="card">
+                <img src="${imageUrl}" class="card-img-top" alt="${element.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${element.title}</h5>
+                    <p class="price">${element.price} VNĐ</p>               
+                    <p class="card-text">${element.description}</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="ql_chuong.html?data=${element.id}" class="btn btn-primary">
+                            <i class="fas fa-cogs"></i> Manage
+                        </a>
+                        <a href="suakhoahoc.html?data=${element.id}" class="btn btn-warning">
+                            <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <button class="btn btn-danger" onclick="xoakhoahoc(${element.id})">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+         </div>`;
         });
         course_conn.innerHTML = html;
     })
@@ -74,3 +80,12 @@ function xoakhoahoc(id) {
 }
 
 document.addEventListener('DOMContentLoaded', getCourse);
+
+
+    document.querySelectorAll('.iq-menu a[data-toggle="collapse"]').forEach((element) => {
+        element.addEventListener('click', function() {
+            const submenu = this.nextElementSibling;
+            submenu.classList.toggle('collapse'); // Toggle the collapse class
+            this.classList.toggle('collapsed'); // Toggle the collapsed class
+        });
+    });

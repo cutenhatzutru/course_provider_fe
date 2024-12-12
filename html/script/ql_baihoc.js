@@ -40,7 +40,6 @@ function getLesson() {
          lstlesson += `<tr>
            <td contenteditable="true">${element.id}</td>
            <td contenteditable="true">${element.title}</td>
-           <td contenteditable="true">${element.description}</td>
            <td>
            <span class="#"><button onclick="previewLesson(${element.id})" type="button" class="btn btn-outline-primary">Preview</button></span>
            </td>
@@ -93,14 +92,16 @@ let addnewlesson = ()=>{
 
 function previewLesson(id){
   let frame = document.getElementById("previewframe")
+  //console.log(id)
   if(preview_btn === 1){
-    fetch("http://localhost:8081/lesson/getlessonbychapter/"+id,{
+    fetch("http://localhost:8081/lesson/getlessonbyid?id="+id,{
       headers: {
         'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
       }
     })
     .then(response => response.json())
-    .then(data => {
+    .then(data1 => {
+      data = data1.data;
       frame.style.display = "block"
       
       document.getElementById("lessonName").innerText = data.title;

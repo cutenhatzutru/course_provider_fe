@@ -71,10 +71,10 @@ a:hover { text-decoration: none; }
 /* scroller */
 .scroller { overflow-y: auto; scrollbar-color: #0084ff #e5f2ff; scrollbar-width: thin; }
 .scroller::-webkit-scrollbar-thumb { background-color: #0084ff; }
-.scroller::-webkit-scrollbar-track { background-color: #e5f2ff; }
+.scroller::-webkit-scrollbar-track { background-color: #495057; }
 
 /* Form */
-#sidebar-scrollbar { height: 100%; }
+#sidebar-scrollbar { height: 100%; background-color: #495057 }
 
 /*---------------------------------------------------------------------
                                   Badge
@@ -222,7 +222,7 @@ a:hover { text-decoration: none; }
 /* Form */
 #sidebar-scrollbar { height: 100vh; }
 .scroll-content div.p-3 { height: 100px; }
-.iq-sidebar-menu .iq-menu .iq-menu-title { display: block; color: #374948; font-size: 15px; position: relative; padding: 15px 20px 15px 30px; font-weight: 500; line-height: 18px; }
+.iq-sidebar-menu .iq-menu .iq-menu-title { display: block; color: #FFF; font-size: 15px; position: relative; padding: 15px 20px 15px 30px; font-weight: 500; line-height: 18px;background-color: #495057; }
 .iq-sidebar-menu { position: relative; }
 .iq-sidebar-menu .iq-menu { margin: 0; padding: 0; list-style-type: none; }
 .iq-sidebar-menu .iq-menu li { list-style-type: none; position: relative; }
@@ -277,12 +277,12 @@ a:hover { text-decoration: none; }
                              Top Menu
 -----------------------------------------------------------------------*/
 .iq-top-navbar .iq-navbar-custom .iq-menu-bt { display: none; }
-.iq-top-navbar { border-radius: 0; margin-bottom: 0; padding: 0; min-height: 73px; position: fixed; top: 0; left: 0; width: 100%; display: inline-block; z-index: 99; background: #ffffff; -webkit-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); -moz-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); }
+.iq-top-navbar { border-radius: 0; margin-bottom: 0; padding: 0; min-height: 73px; position: fixed; top: 0; left: 0; width: 100%; display: inline-block; z-index: 99; background: #ffffff; -webkit-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); -moz-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); background:#495057 ;}
 .iq-top-navbar .iq-navbar-custom .navbar-breadcrumb { display: inline-block; margin: 15px 0 0 30px; float: left; }
 .iq-top-navbar .breadcrumb .breadcrumb-item.active { color: #777D74; }
 .iq-top-navbar .breadcrumb { background: transparent; padding: 0; margin: 0; }
 .iq-top-navbar .breadcrumb li { list-style-type: none; font-size: 12px; }
-.breadcrumb-item+.breadcrumb-item::before { content: "\ea5f"; font-family: 'remixicon'; font-size: 14px; vertical-align: sub; color: #777D74; }
+.breadcrumb-item+.breadcrumb-item::before { content: "\ea5f"; font-family: 'remixicon'; font-size: 14px; vertical-align: sub; color: #777D74; background:#495057 ; }
 .iq-top-navbar .breadcrumb li a, .iq-top-navbar .breadcrumb li a:hover { text-decoration: none; }
 .navbar-list { margin: 0; padding: 0; float: right; }
 .navbar-list li { float: left; list-style-type: none; position: relative; }
@@ -307,14 +307,14 @@ a:hover { text-decoration: none; }
 }
 
 /*---------- Sidebar Logo --------------*/
-.iq-sidebar-logo { display: inline-block; width: 260px; padding-top: 15px; padding-left: 20px; float: left; position: relative; background: #ffffff; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
-.iq-sidebar-logo a { display: flex; align-items: flex-start; }
-.iq-sidebar-logo a span { margin-left: 10px; font-size: 28px; line-height: 45px; color: #374948; font-family: 'Questrial', sans-serif; flex: 1; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
+.iq-sidebar-logo { display: inline-block; width: 260px; padding-top: 15px; padding-left: 20px; float: left; position: relative;background-color: #495057;; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
+.iq-sidebar-logo a {  align-items: flex-start; }
+.iq-sidebar-logo a span { margin-left: 10px; font-size: 28px; line-height: 45px; color: #eff6f6;background-color: #495057; font-family: 'Questrial', sans-serif; flex: 1; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
 .iq-sidebar-logo a:hover, .iq-sidebar-logo a:focus { text-decoration: none; }
 .iq-sidebar-logo img { height: 45px; }
 .iq-menu-bt { background: #e5f2ff; padding: 12px 10px; margin-right: 15px; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
 .wrapper-menu {color: #0084ff; width: 20px; height: 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; transition: transform 330ms ease-out; }
-.wrapper-menu.open { transform: rotate(-45deg); }
+.wrapper-menu.open { transform: rotate(-45deg);}
 .line-menu { background-color: #0084ff; border-radius: 90px; width: 100%; height: 2px; }
 .line-menu.half { width: 50%; }
 .line-menu.start { transition: transform 330ms cubic-bezier(0.54, -0.81, 0.37, 0.37); transform-origin: right; }
@@ -323,7 +323,7 @@ a:hover { text-decoration: none; }
 .open .line-menu.end { transform: rotate(-90deg) translateX(-3px); }
 
 /*----------------------*/
-.iq-top-navbar .iq-sub-dropdown { width: 300px; display: none; position: absolute; top: 100%; right: 0; -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; -webkit-transform: translateY(100%); transform: translateY(100%); background-color: #ffffff; transition: all 0.3s; padding: 0; border-radius: 4px; -webkit-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); -moz-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
+.iq-top-navbar .iq-sub-dropdown { width: 300px; display: none; position: absolute; top: 100%; right: 0; -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; -webkit-transform: translateY(100%); transform: translateY(100%); background-color: #00060c; transition: all 0.3s; padding: 0; border-radius: 4px; -webkit-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); -moz-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1); -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
 
 /* ----------------------------------------------
  * Generated by Animista on 2019-12-22 15:30:2
@@ -358,14 +358,14 @@ a:hover { text-decoration: none; }
 .content-page { margin-left: 260px; overflow: hidden; padding: 100px 15px 0; min-height: 100vh; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
 .iq-user-dropdown { width: 350px; }
 body.sidebar-main .content-page, body.sidebar-main .iq-footer { margin-left: 80px; }
-body.sidebar-main .iq-sidebar-logo { width: 80px; }
+body.sidebar-main .iq-sidebar-logo { width: 80px; background-color: #dbe6f0;}
 body.sidebar-main .iq-sidebar .iq-sidebar-menu .iq-menu li a span, body.sidebar-main .iq-sidebar-logo a span, body.sidebar-main .iq-sidebar-menu .iq-menu li a .badge { opacity: 0; display: none; }
 body.sidebar-main .iq-menu-bt { opacity: 0; display: none; }
-body.sidebar-main .iq-sidebar { width: 80px; }
-body.sidebar-main .iq-sidebar-menu .iq-menu li a .iq-arrow-right { margin-right: 0; display: none; }
-body.sidebar-main .iq-sidebar:hover, body.sidebar-main .iq-sidebar:hover .iq-sidebar-logo { width: 260px; }
+body.sidebar-main .iq-sidebar { width: 80px; background: #495057;}
+body.sidebar-main .iq-sidebar-menu .iq-menu li a .iq-arrow-right { margin-right: 0; display: none;background: #495057; }
+body.sidebar-main .iq-sidebar:hover, body.sidebar-main .iq-sidebar:hover .iq-sidebar-logo { width: 260px; background: #495057;}
 body.sidebar-main .iq-sidebar:hover .iq-sidebar-menu .iq-menu li a .iq-arrow-right { margin-right: 0; display: inline-block; }
-body.sidebar-main .iq-sidebar:hover .iq-sidebar-menu .iq-menu li a span, body.sidebar-main .iq-sidebar:hover .iq-sidebar-logo a span, body.sidebar-main .iq-sidebar:hover .iq-sidebar-menu .iq-menu li a .badge, body.sidebar-main .iq-sidebar:hover .iq-menu-bt { opacity: 1; display: inline-block; }
+body.sidebar-main .iq-sidebar:hover .iq-sidebar-menu .iq-menu li a span, body.sidebar-main .iq-sidebar:hover .iq-sidebar-logo a span, body.sidebar-main .iq-sidebar:hover .iq-sidebar-menu .iq-menu li a .badge, body.sidebar-main .iq-sidebar:hover .iq-menu-bt { opacity: 1; display: inline-block; background:#495057 ; }
 /* --------------- */
 .iq-card.iq-border-box {border-bottom: 4px solid;}
 .right-block .image-absulute.image-absulute-1 { position: absolute; top: 10px; left: auto; right: 240px; }
@@ -496,7 +496,7 @@ body.sidebar-main .iq-sidebar:hover .iq-sidebar-menu .iq-menu li a span, body.si
 .iq-email-listbox .iq-email-sender-list>li:hover { background: #fff; -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 132, 255, 0.2); -moz-box-shadow: 0px 0px 30px 0px rgba(0, 132, 255, 0.2); box-shadow: 0px 0px 30px 0px rgba(0, 132, 255, 0.2); }
 .iq-email-listbox .iq-email-sender-list li a:hover { text-decoration: none; }
 .iq-email-listbox .iq-email-sender-list li.iq-unread a { color: #0084ff; font-weight: 500; }
-.iq-email-listbox .iq-email-sender-list li.iq-unread li a { color: #007bff; }
+.iq-email-listbox .iq-email-sender-list li.iq-unread li a { font-size: 14px; color: #007bff; }
 .iq-email-sender-info .iq-checkbox-mail, .iq-email-sender-info .iq-star-toggle { display: block; float: left; }
 .iq-email-sender-info .iq-checkbox-mail { cursor: pointer; height: 20px; width: 20px; margin-top: 4px; }
 .iq-email-sender-info .iq-star-toggle { color: #777D74; margin-left: 10px; font-size: 18px; }
@@ -736,7 +736,7 @@ Calender
 .calender-small .flatpickr-current-month .flatpickr-monthDropdown-months { font-size: 16px; }
 .calender-small .flatpickr-current-month .flatpickr-monthDropdown-months:hover { background: transparent; color: #0084ff; }
 .calender-small .flatpickr-current-month input.cur-year { font-size: 16px; }
-.calender-small .numInputWrapper:hover { background: transparent; }
+.calender-small .numInputWrapper:hover {background-color: #495057 }
 .calender-small .flatpickr-months .flatpickr-prev-month, .calender-small .flatpickr-months .flatpickr-next-month { padding: 7px 10px; }
 .calender-small .flatpickr-day.selected, .calender-small .flatpickr-day.startRange, .calender-small .flatpickr-day.endRange, .calender-small .flatpickr-day.selected.inRange, .calender-small .flatpickr-day.startRange.inRange, .calender-small .flatpickr-day.endRange.inRange, .calender-small .flatpickr-day.selected:focus, .calender-small .flatpickr-day.startRange:focus, .calender-small .flatpickr-day.endRange:focus, .calender-small .flatpickr-day.selected:hover, .calender-small .flatpickr-day.startRange:hover, .calender-small .flatpickr-day.endRange:hover, .calender-small .flatpickr-day.selected.prevMonthDay, .calender-small .flatpickr-day.startRange.prevMonthDay, .calender-small .flatpickr-day.endRange.prevMonthDay, .calender-small .flatpickr-day.selected.nextMonthDay, .calender-small .flatpickr-day.startRange.nextMonthDay, .calender-small .flatpickr-day.endRange.nextMonthDay { color: #fff; border-color: #0084ff; background: #0084ff; }
 .calender-small .flatpickr-day.inRange, .calender-small .flatpickr-day.prevMonthDay.inRange, .calender-small .flatpickr-day.nextMonthDay.inRange, .calender-small .flatpickr-day.today.inRange, .calender-small .flatpickr-day.prevMonthDay.today.inRange, .calender-small .flatpickr-day.nextMonthDay.today.inRange, .calender-small .flatpickr-day:hover, .calender-small .flatpickr-day.prevMonthDay:hover, .calender-small .flatpickr-day.nextMonthDay:hover, .calender-small .flatpickr-day:focus, .calender-small .flatpickr-day.prevMonthDay:focus, .calender-small .flatpickr-day.nextMonthDay:focus { background: #e5f2ff; color: #0084ff; border-color: transparent; }
@@ -1014,21 +1014,939 @@ horizontal page
 /*---------------------------------------------------------------------
 small sidebar with icon
 -----------------------------------------------------------------------*/
-.two-sidebar .iq-sidebar-small { z-index: 1030; position: fixed; width: 60px; height: 100vh; top: 0; left: 0; padding: 10px 0; display: flex; flex-direction: column; justify-content: space-between; text-align: center; background: #fff; }
+.two-sidebar .iq-sidebar-small { z-index: 1030; position: fixed; width: 60px; height: 100vh; top: 0; left: 0; padding: 10px 0; display: flex; flex-direction: column; justify-content: space-between; text-align: center; background-color: #495057; }
 .two-sidebar .iq-sidebar { margin-left: 60px; }
 .two-sidebar .content-page { margin-left: 320px; }
 .two-sidebar .iq-sidebar-logo { width: 320px; }
 .two-sidebar .iq-footer { margin-left: 320px; }
 .two-sidebar .iq-menu-bt { margin: 0 auto; line-height: 17px; font-size: 20px; }
 body.two-sidebar.sidebar-main .iq-sidebar-small .iq-menu-bt { opacity: 1; display: block; }
-body.two-sidebar.sidebar-main .iq-sidebar { width: 0; }
+body.two-sidebar.sidebar-main .iq-sidebar { width: 0;background-color: #495057 }
 body.two-sidebar.sidebar-main .content-page, body.sidebar-main .iq-footer { margin-left: 60px; }
 body.two-sidebar.sidebar-main .iq-sidebar-logo { width: 60px }
 .sidebar-menu-icon { display: flex; flex-direction: column; }
 .sidebar-menu-icon > a { font-size: 18px; display: block; padding: 5px 0; color: #ffffff }
 .menu-open { opacity: 0; position: absolute; top: 0; text-align: center; left: 0; right: 0; margin: 0 auto; border-radius: 50%; }
-.wrapper-menu.open .menu-close { opacity: 0; }
+.wrapper-menu.open .menu-close { opacity: 0;background-color: #fff }
 .wrapper-menu.open .menu-open { opacity: 1; }
-.two-sidebar.sidebar-main .wrapper-menu.open { transform: rotate(0deg); }
+.two-sidebar.sidebar-main .wrapper-menu.open { transform: rotate(0deg);background-color: #495057 }
+
+.price {
+  font-size: 1.25rem; /* Kích thước chữ lớn hơn */
+  font-weight: bold; /* In đậm */
+  color: #d72935; /* Màu xanh lá cây, có thể điều chỉnh theo ý thích */
+  margin: 0; /* Loại bỏ margin mặc định */
+  padding: 0.5rem 0; /* Thêm một chút padding để tạo khoảng cách */
+}
+
+.price::before {
+  content: "₫ "; /* Thêm ký hiệu tiền tệ trước giá */
+  font-size: 1rem; /* Kích thước chữ cho ký hiệu tiền tệ */
+  color: #6c757d; /* Màu xám cho ký hiệu tiền tệ */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Đảm bảo tất cả card có chiều cao bằng nhau */
+  margin-bottom: 1.5rem; /* Khoảng cách giữa các card */
+  border: 1px solid #ddd; /* Viền cho card */
+  border-radius: 8px; /* Bo góc cho card */
+  overflow: hidden; /* Ẩn phần thừa */
+  transition: transform 0.2s; /* Hiệu ứng khi hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Phóng to card khi hover */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 150px; /* Giảm chiều cao của ảnh */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+  border-bottom: 1px solid #ddd; /* Viền dưới ảnh */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; /* Định hướng phần thân card theo chiều dọc */
+  justify-content: space-between; /* Căn chỉnh các phần tử */
+  height: 100%; /* Đảm bảo chiều cao của card được sử dụng hết */
+  padding: 1rem; /* Thêm padding cho phần thân card */
+}
+
+.card-title,
+.card-text,
+.price {
+  margin: 0; /* Xóa margin để căn thẳng hàng */
+  text-align: left; /* Căn trái */
+}
+
+.card-title {
+  font-size: 1.2rem; /* Kích thước chữ tiêu đề */
+  font-weight: bold; /* In đậm */
+  display: -webkit-box; /* Thiết lập hiển thị kiểu box */
+  -webkit-box-orient: vertical; /* Định hướng box theo chiều dọc */
+  -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
+  overflow: hidden; /* Ẩn phần thừa */
+  text-overflow: ellipsis; /* Hiện ba chấm (...) */
+}
+
+.card-text {
+  flex-grow: 1; /* Cho phép nội dung mở rộng */
+  display: -webkit-box; /* Thiết lập hiển thị kiểu box */
+  -webkit-line-clamp: 3; /* Giới hạn số dòng hiển thị */
+  -webkit-box-orient: vertical; /* Định hướng box theo chiều dọc */
+  overflow: hidden; /* Ẩn phần thừa */
+  text-overflow: ellipsis; /* Hiện ba chấm (...) */
+}
+
+.price {
+  font-size: 1.2rem; /* Kích thước chữ */
+  font-weight: bold; /* In đậm */
+  color: #ff4d4d; /* Màu đỏ */
+  margin-top: auto; /* Đẩy giá xuống cuối cùng của card */
+}
+.card {
+
+  margin: 1%; /* Khoảng cách giữa các card */
+}
+
+.card-img-top {
+  height: 200px; /* Chiều cao của ảnh */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+.btn {
+  padding: 3px 6px; /* Compact padding */
+  font-size: 14px;  /* Set font size to 14px */
+  border-radius: 4px; /* Slightly rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.btn i {
+  font-size: 0.8em;  /* Smaller icon size */
+  margin-right: 3px; /* Less space between icon and text */
+}
+
+/* Hover Effects */
+.btn:hover {
+  background-color: #0056b3; /* Change background color on hover for primary button */
+  color: white; /* Change text color on hover */
+}
+
+.btn-warning:hover {
+  background-color: #e0a800; /* Change background color on hover for warning button */
+  color: white; /* Change text color on hover */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Change background color on hover for danger button */
+  color: white; /* Change text color on hover */
+}
+
+/* General Styles */
+body {
+  background-color: #f4f7fa;
+  font-family: 'Arial', sans-serif;
+}
+
+.iq-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.iq-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header Styles */
+.iq-card-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+input.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
 
 
+/* Image Upload Styles */
+.add-img-user {
+  position: relative;
+  text-align: center;
+}
+
+.upload-button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #218838;
+}
+
+/* Custom Switch Styles */
+.custom-control-label {
+  margin-left: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .col-lg-3, .col-lg-9 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
+/* General Styles */
+body {
+  background-color: #bfd6ee;
+  font-family: 'Arial', sans-serif;
+}
+
+.iq-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, border 0.3s;
+  border: 1px solid transparent; /* Initial border */
+}
+
+.iq-card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #007bff; /* Border color on hover */
+}
+
+/* Header Styles */
+.iq-card-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+input.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: 'Georgia', serif; /* Stylish font */
+}
+
+input.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  color: white;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Image Upload Styles */
+.add-img-user {
+  position: relative;
+  text-align: center;
+}
+
+/* Centering the image and adding styles */
+/* Centering and enlarging the image */
+.add-img-user {
+  position: relative;
+  text-align: center;
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.profile-pic {
+  width: 120px; /* Increase this value to make the image larger */
+  height: 120px; /* Set a fixed height to maintain the aspect ratio */
+  border-radius: 50%; /* Keep the circular shape */
+  margin-bottom: 15px; /* Space between image and button */
+  display: block; /* Ensure it's treated as a block element */
+  margin-left: auto; /* Center the image */
+  margin-right: auto; /* Center the image */
+}
+
+/* Adjusting the button styles */
+.upload-button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Ensuring the text is centered */
+.img-extension {
+  text-align: center;
+  margin-top: 10px; /* Space above the extension text */
+}
+
+/* Ensuring the text is centered */
+.img-extension {
+    text-align: center;
+    margin-top: 10px; /* Space above the extension text */
+}
+.upload-button:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Custom Switch Styles */
+.custom-control-label {
+  margin-left: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .col-lg-3, .col-lg-9 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
+
+/* Centering the image and adding styles */
+.add-img-user {
+  position: relative;
+  text-align: center;
+  margin: 20px 0; /* Add some margin for spacing */
+}
+
+.profile-pic {
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image circular */
+  margin-bottom: 15px; /* Space between image and button */
+}
+
+.upload-button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnAddnewlesson {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Space above the button */
+  margin-bottom: 20px; /* Add space below the button */
+}
+
+/* Sidebar Container */
+#sidebar-scrollbar {
+  width: 250px; /* Fixed width */
+   /* Light background */
+  color: #333333; /* Dark text */
+  position: fixed; /* Fixed positioning */
+  height: 100%; /* Full height */
+  overflow-y: auto; /* Scrollable if content overflows */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Menu Title */
+.iq-menu-title {
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Menu List */
+.iq-menu {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+}
+
+/* Menu Items */
+.iq-menu li {
+  position: relative;
+}
+
+.iq-menu a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.iq-menu a:hover {
+  background-color: #e9ecef; /* Light background on hover */
+  padding-left: 25px; /* Indent on hover */
+}
+
+/* Icons */
+.iq-menu a i {
+  margin-right: 10px; /* Space between icon and text */
+  transition: transform 0.3s; /* Smooth icon animation */
+}
+
+.iq-menu a:hover i {
+  transform: rotate(15deg); /* Rotate icon on hover */
+}
+
+/* Active Item */
+.iq-menu li.active a {
+  background-color: #007bff; /* Highlight active link */
+  color: #ffffff; /* White text for active link */
+}
+
+/* Submenu */
+.iq-submenu {
+  list-style: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+  transition: max-height 0.3s ease; /* Smooth transition for expansion */
+}
+
+.iq-submenu li a {
+  padding-left: 40px; /* Indent submenu items */
+}
+
+/* Arrow Icon */
+.iq-arrow-right {
+  margin-left: auto; /* Push arrow to the right */
+  transition: transform 0.3s; /* Smooth arrow rotation */
+}
+
+/* Rotate arrow on open */
+.collapsed .iq-arrow-right {
+  transform: rotate(90deg); /* Rotate arrow when collapsed */
+}
+
+/* Sidebar Styles */
+#sidebar {
+  width: 250px; /* Fixed width */
+/* Dark background */
+  color: #ffffff; /* White text */
+  position: fixed; /* Fixed positioning */
+  height: 100%; /* Full height */
+  overflow-y: auto; /* Scrollable if content overflows */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Menu Title */
+.menu-title {
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff; /* Blue color for title */
+}
+
+/* Menu List */
+.menu {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+}
+
+/* Menu Items */
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: #ffffff; /* White text */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+.menu a:hover {
+  background-color: #495057; /* Darker background on hover */
+}
+
+/* Icons */
+.menu a i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* Active Item */
+.menu li.active a {
+  background-color: #fff; /* Highlight active link */
+}
+
+/* New Item Badge */
+/* Basic styling for the sidebar */
+.iq-sidebar {
+ /* Dark background */
+   /* White text */
+  width: 250px; /* Width of the sidebar */
+  height: 100vh; /* Full height */
+  position: fixed; /* Fixed position */
+  overflow-y: auto; /* Scrollable */
+  transition: width 0.3s; /* Smooth transition */
+}
+
+/* Custom scrollbar for the sidebar */
+.iq-sidebar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.iq-sidebar::-webkit-scrollbar-track {
+  background-color: #343a40; /* Background of the scrollbar track */
+}
+
+.iq-sidebar::-webkit-scrollbar-thumb {
+  background-color: #495057; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.iq-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #007bff; /* Color on hover */
+}
+
+/* Firefox custom scrollbar */
+.iq-sidebar {
+  scrollbar-width: thin;
+  background:#495057 ;
+
+}
+
+/* Logo styling */
+.iq-sidebar-logo {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.iq-sidebar-logo img {
+  max-width: 50px; /* Logo size */
+  margin-right: 10px;
+}
+
+/* Menu title styling */
+.iq-menu-title {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  
+}
+
+/* Menu item styling */
+.iq-sidebar-menu .iq-menu li {
+  list-style: none; /* Remove bullet points */
+}
+
+.iq-sidebar-menu .iq-menu li a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Hover effect */
+.iq-sidebar-menu .iq-menu li a:hover {
+  background: #495057; /* Darker background on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Active menu item styling */
+.iq-menu li.active a {
+  background-color: #007bff; /* Blue background for active item */
+}
+
+/* Icon styling */
+.iq-sidebar-menu .iq-menu li a i {
+  margin-right: 10px; /* Space between icon and text */
+  background:#495057 ;
+
+}
+
+/* Submenu styling */
+.iq-submenu {
+  padding-left: 20px; /* Indent submenu */
+  display: none; /* Hide by default */
+  background:#495057 ;
+}
+
+.iq-menu li a.collapsed + .iq-submenu {
+  display: block; /* Show submenu when expanded */
+  background:#495057 ;
+}
+
+/* Arrow icon for submenu */
+.iq-arrow-right {
+  margin-left: auto; /* Push arrow to the right */
+  transition: transform 0.3s; /* Smooth rotation */
+  background: #495057;
+}
+
+.iq-menu li a.collapsed .iq-arrow-right {
+  transform: rotate(90deg); /* Rotate arrow on expansion */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .iq-sidebar {
+      width: 200px; /* Smaller width on mobile */
+      background: #0b2f52;
+  }
+
+  .iq-sidebar-menu .iq-menu li a {
+      padding: 10px 15px; /* Smaller padding */
+      background: #032446;
+  }
+}
+.iq-card .iq-card-header .iq-header-title .card-title {
+  margin-bottom: 0;
+  color: #fff;
+}
+  .navbar-breadcrumb h5 {
+    display: none; /* Ẩn chữ "UTC's Provider" */
+}
+
+.navbar-breadcrumb h5 {
+  display: none; /* Ẩn chữ "UTC's Provider" */
+}
+
+.navbar-breadcrumb .breadcrumb {
+  display: block; /* Đẩy xuống dòng dưới */
+}
+
+.navbar-breadcrumb .breadcrumb-item-active {
+  font-size: 16px; /* Tăng kích thước font chữ lên */
+  color: white; /* Màu xanh cho Home */
+  font-weight: 300; /* Chữ mỏng */
+}
+
+.iq-sidebar-logo {
+  display: flex; /* Sử dụng flexbox để căn chỉnh */
+  align-items: center; /* Căn giữa tất cả các mục */
+}
+
+.iq-sidebar-logo img {
+  width: 70px; /* Thay đổi kích thước logo */
+  height: auto; /* Giữ tỷ lệ khung hình */
+  margin: 0 10px; /* Khoảng cách hai bên cho logo */
+
+}
+
+.iq-sidebar-logo .logo-text {
+  display: flex;
+  flex-direction: column; /* Đặt chữ "UTC's" và "Provider" theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+}
+
+.iq-sidebar-logo a {
+  margin-right: 10px; /* Khoảng cách giữa chữ và dấu "X" */
+  font-size: 16px; /* Kích thước chữ */
+  color: white; /* Màu chữ */
+  font-weight: 300; /* Chữ mỏng */
+}
+
+.close-button {
+  display: flex; /* Để căn giữa dấu "X" */
+  align-items: center;
+}
+
+.iq-menu li a {
+  display: block; /* Để toàn bộ khu vực của mục menu có thể hover */
+  padding: 10px; /* Khoảng cách cho các mục menu */
+  color: #fff; /* Màu chữ mặc định */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp */
+}
+
+.iq-menu li a:hover {
+  background-color: #3f51b5; /* Màu nền khi hover */
+  color: white; /* Màu chữ khi hover */
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f0f0f0;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.table tr:hover {
+  background-color: #e9ecef;
+  transform: scale(1.02);
+}
+
+.table tr {
+  transition: background-color 0.2s;
+}
+
+/* Animation for new entries */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.table tbody tr {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.bodykhoahocnoibat {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.bodykhoahocnoibat:hover {
+  background-color: #e9ecef;  /* Màu nền khi hover */
+  transform: scale(1.02);      /* Phóng to phần tử khi hover */
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.container:hover {
+  background-color: #f8f9fa; /* Màu nền khi hover */
+  transform: scale(1.02);     /* Phóng to khi hover */
+   /* Phóng to khi hover */
+   border: 1px solid #007bff;
+}
+
+/* Định dạng chung cho các thẻ card */
+.iq-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.iq-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Định dạng cho biểu tượng tròn */
+.rounded-circle {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.iq-bg-primary {
+  background-color: #007bff;
+}
+
+.iq-bg-warning {
+  background-color: #ffc107;
+}
+
+.iq-bg-success {
+  background-color: #28a745;
+}
+
+.iq-bg-danger {
+  background-color: #dc3545;
+}
+
+.rounded-circle:hover {
+  transform: scale(1.1);
+}
+
+/* Định dạng cho bảng */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Định dạng cho tiêu đề */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Định dạng cho các số liệu */
+.mb-0 {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card-title {
+  padding: auto;
+  font-size: 1.5rem; /* Kích thước chữ lớn hơn */
+  font-weight: bold; /* Làm đậm chữ */
+  color: #fff; /* Màu chữ tối hơn để dễ đọc */
+  margin-bottom: 1rem;
+}
+
+.table th {
+  background-color: #007bff; /* Màu nền cho tiêu đề bảng */
+  color: white; /* Màu chữ trắng cho tiêu đề */
+  font-weight: bold; /* Làm đậm chữ */
+  text-align: left; /* Căn trái chữ */
+  padding: 12px; /* Thêm khoảng cách cho tiêu đề */
+}
+
+.table td {
+  padding: 10px; /* Thêm khoảng cách cho các ô dữ liệu */
+}
+
+/* Định dạng cho hàng trong bảng */
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Màu nền cho hàng lẻ */
+}
+
+.table th:hover {
+  background-color: #0056b3; /* Hiệu ứng hover cho tiêu đề */
+}
+
+
+.table th {
+  background-color: #007bff;
+  color: black;
+  font-weight: bold;
+  text-align: left;
+  padding: 12px;
+}
+
+.h4, h4 {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.line-height-6 {
+  line-height: 50px;
+}

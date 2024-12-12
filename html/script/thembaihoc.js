@@ -79,7 +79,7 @@ function addLessonToDB(formData) {
     .then(data => {
         console.log(data);
         // Optionally redirect or handle success
-        // window.location.href = `./ql_baihoc.html?data=${chapter_id}`;
+        window.location.href = `./ql_baihoc.html?data=${chapter_id}`;
     })
     .catch(error => {
         console.error('Error:', error);

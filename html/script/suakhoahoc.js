@@ -24,7 +24,7 @@ function getcoursebyid(){
 
 function updatecourse() {
   const formData = new FormData(); // Tạo đối tượng FormData
-
+  formData.append('providerId',data1.id)
 
   formData.append('id', data1.id);
 
@@ -43,8 +43,7 @@ function updatecourse() {
   const inputFile = document.getElementById('imageD').files[0];
   if(inputFile!=null) formData.append('multipartFile', inputFile);
 
-
-  fetch('http://localhost:8081/course/update', {
+ fetch('http://localhost:8081/course/update', {
     method: 'PUT',
       headers: {
         'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
@@ -55,7 +54,7 @@ function updatecourse() {
     .then(response => response.json()) // Chuyển đổi response sang định dạng JSON
     .then(data => {
       console.log(data); // Log data được trả về từ server
-     // window.location.href = "./ql_khoahoc.html";
+      window.location.href = "./ql_khoahoc.html";
     })
     .catch(error => {
       console.error('Error:', error); // Log lỗi nếu có
