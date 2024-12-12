@@ -2,7 +2,7 @@ var urlParams = new URLSearchParams(window.location.search);
 var data1 = urlParams.get('data');
 const jwt = localStorage.getItem('jwt');
 function getcoursebyid(){
-  fetch('http://localhost:8081/course/'+data1,{
+  fetch('http://localhost:8083/course/'+data1,{
     headers: {
       'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
     }
@@ -43,7 +43,7 @@ function updatecourse() {
   const inputFile = document.getElementById('imageD').files[0];
   if(inputFile!=null) formData.append('multipartFile', inputFile);
 
- fetch('http://localhost:8081/course/update', {
+ fetch('http://localhost:8083/course/update', {
     method: 'PUT',
       headers: {
         'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization

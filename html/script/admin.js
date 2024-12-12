@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Lấy 5 khóa học từ API
-    fetch('http://localhost:8081/provider/get4course/1')
+    fetch('http://localhost:8083/provider/get4course/1')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -42,7 +42,7 @@ function formatCurrency(value) {
 
 function fetchData() {
     // Lấy tổng số khóa học
-    fetch('http://localhost:8081/admin/getNumberCourse')
+    fetch('http://localhost:8083/admin/getNumberCourse')
         .then(response => response.json())
         .then(courseData => {
             console.log(courseData)
@@ -52,7 +52,7 @@ function fetchData() {
         .catch(error => console.error('Error fetching course data:', error));
 
     // Lấy tổng số người đăng ký
-    fetch('http://localhost:8081/admin/getNumberEnroll')
+    fetch('http://localhost:8083/admin/getNumberEnroll')
         .then(response => response.json())
         .then(studentData => {
             document.getElementById('totalRegistrations').textContent = formatNumber(studentData.data);
@@ -61,14 +61,14 @@ function fetchData() {
         .catch(error => console.error('Error fetching student data:', error));
 
     // Lấy tổng số nhà cung cấp
-    fetch('http://localhost:8081/admin/getNumberProvider')
+    fetch('http://localhost:8083/admin/getNumberProvider')
         .then(response => response.json())
         .then(providerData => {
             document.getElementById('totalProviders').textContent = formatNumber(providerData.data);
         })
         .catch(error => console.error('Error fetching provider data:', error));
 
-        fetch('http://localhost:8081/admin/getNumberLearner')
+        fetch('http://localhost:8083/admin/getNumberLearner')
         .then(response => response.json())
         .then(learnerData => {
             document.getElementById('totalLearners').textContent = formatNumber(learnerData.data);
@@ -76,7 +76,7 @@ function fetchData() {
         })
         .catch(error => console.error('Error fetching course data:', error));
     // Lấy top 5 người học
-    fetch('http://localhost:8081/admin/getTopLearners')
+    fetch('http://localhost:8083/admin/getTopLearners')
         .then(response => response.json())
         .then(learnerData => {
             const topLearnersList = document.getElementById('topLearnersList');
@@ -95,7 +95,7 @@ function fetchData() {
         .catch(error => console.error('Error fetching top learners:', error));
 
     // Lấy top 5 nhà cung cấp
-    fetch('http://localhost:8081/admin/getTopProviders')
+    fetch('http://localhost:8083/admin/getTopProviders')
         .then(response => response.json())
         .then(providerData => {
             const topProvidersList = document.getElementById('topProvidersList');

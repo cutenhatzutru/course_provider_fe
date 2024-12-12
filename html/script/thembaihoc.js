@@ -3,7 +3,7 @@ var chapter_id = urlParams.get('data');
 const jwt = localStorage.getItem('jwt');
 
 function getUrl(type) {
-    return fetch(`http://localhost:8081/lesson/getpreurl?type=${type}`, {
+    return fetch(`http://localhost:8083/lesson/getpreurl?type=${type}`, {
         headers: {
             'Authorization': `Bearer ${jwt}` // Add JWT to Authorization header
         }
@@ -67,7 +67,7 @@ function uploadToS3(presignedUrl, file) {
 }
 
 function addLessonToDB(formData) {
-    return fetch('http://localhost:8081/lesson/addlessontochapter', {
+    return fetch('http://localhost:8083/lesson/addlessontochapter', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${jwt}`,

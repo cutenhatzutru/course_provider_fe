@@ -8,7 +8,7 @@ function getChapter() {
         return;
     }
 
-    fetch('http://localhost:8081/chapter/getchapterbycourse/' + data, {
+    fetch('http://localhost:8083/chapter/getchapterbycourse/' + data, {
         headers: {
             'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
         }
@@ -107,7 +107,7 @@ function getID() {
 }
 
 function remove(data) {
-    const url = 'http://localhost:8081/chapter/getchapterbycourse/' + data;
+    const url = 'http://localhost:8083/chapter/getchapterbycourse/' + data;
 
     fetch(url, {
         method: 'DELETE',

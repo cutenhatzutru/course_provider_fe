@@ -4,7 +4,7 @@ const jwt = localStorage.getItem('jwt');
 
 // Hàm để lấy thông tin khóa học
 function getCourse(courseId) {
-    return fetch("http://localhost:8081/course/" + 1, {
+    return fetch("http://localhost:8083/course/" + 1, {
         headers: {
             'Authorization': `Bearer ${jwt}`,
             'Accept': 'application/json',
@@ -52,7 +52,7 @@ function addchapter() {
             };
 
             console.log(data)
-            return fetch('http://localhost:8081/chapter/addtocourse', {
+            return fetch('http://localhost:8083/chapter/addtocourse', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${jwt}`,

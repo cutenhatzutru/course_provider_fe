@@ -6,7 +6,7 @@ function getCourse(id) {
     //     return;
     // }
 
-    fetch('http://localhost:8081/course/provider/' + 1, {
+    fetch('http://localhost:8083/course/provider/' + 1, {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function getCourse(id) {
 }
 
 function xoakhoahoc(id) {
-    const url = 'http://localhost:8081/course/delete/' + id;
+    const url = 'http://localhost:8083/course/delete/' + id;
 
     fetch(url, {
         method: 'DELETE',
