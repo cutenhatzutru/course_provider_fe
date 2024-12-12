@@ -855,7 +855,7 @@ ul.user-status { list-style: none; }
 #user-detail-popup { position: absolute; top: 0; width: 310px; background: #fff; right: 0; overflow: hidden; left: auto; z-index: 9; height: 100%; opacity: 0; transform: translateX(-90%); -webkit-transform: translateX(-90%); transition: all 0.45s ease 0s; -webkit-transition: all 0.45s ease 0s; box-shadow: 0px 0px 12px 0px rgba(55, 73, 72, 0.06); border-radius: 5px; visibility: hidden; }
 #user-detail-popup.show { opacity: 1; visibility: visible; transform: translateX(0); -webkit-transform: translateX(0); transition: all 0.45s ease 0s; -webkit-transition: all 0.45s ease 0s; }
 #user-detail-popup .user-profile button.close-popup { text-align: right; width: 100%; }
-.chat-sidebar-channel h5 { border-bottom: 1px solid #f1f2f1; padding-bottom: 10px; }
+.chat-sidebar-channel h5 { border-bottom: 1px solid #f1f2f1; padding-bottom: 10px; color:#000}
 .chat-sidebar-name h6 { font-size: 1.2em; }
 .chat-sidebar-name span { color: #777D74; }
 button.close-btn-res { display: none; }
@@ -1653,9 +1653,6 @@ input.form-control:focus {
   margin-bottom: 0;
   color: #fff;
 }
-  .navbar-breadcrumb h5 {
-    display: none; /* Ẩn chữ "UTC's Provider" */
-}
 
 .navbar-breadcrumb h5 {
   display: none; /* Ẩn chữ "UTC's Provider" */
@@ -1888,24 +1885,15 @@ h2 {
 }
 
 /* Định dạng cho tiêu đề */
-.card-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
 
 /* Định dạng cho các số liệu */
-.mb-0 {
-  margin-bottom: 0;
-  font-size: 2rem;
-  font-weight: bold;
-}
+
 
 .card-title {
   padding: auto;
-  font-size: 1.5rem; /* Kích thước chữ lớn hơn */
+  font-size: 1.3rem; /* Kích thước chữ lớn hơn */
   font-weight: bold; /* Làm đậm chữ */
-  color: #fff; /* Màu chữ tối hơn để dễ đọc */
+  color: #212529; /* Màu chữ tối hơn để dễ đọc */
   margin-bottom: 1rem;
 }
 
