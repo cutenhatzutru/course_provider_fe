@@ -35,8 +35,8 @@ function addcourse() {
   const inputFile = document.getElementById('imageC').files[0];
   formData.append('multipartFile', inputFile);
 
-  // Gửi request POST đến URL 'http://localhost:8081/upload/course/add' với body là formData
-  fetch('http://localhost:8081/course/add', {
+  // Gửi request POST đến URL 'http://localhost:8083/upload/course/add' với body là formData
+  fetch('http://localhost:8083/course/add', {
     method: 'POST',
     headers:{'Authorization': `Bearer ${jwt}`,},
     body: formData
@@ -55,7 +55,7 @@ function addcourse() {
 
 // function getAuthor() {
 
-//     fetch('http://localhost:8081/authors/getall',{
+//     fetch('http://localhost:8083/authors/getall',{
 //       headers: {
 //         'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
 //       }

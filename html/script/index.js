@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('http://localhost:8081/provider/get4course/1') // Thay đổi API để lấy 5 khóa học
+    fetch('http://localhost:8083/provider/get4course/1') // Thay đổi API để lấy 5 khóa học
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -38,7 +38,7 @@ function formatCurrency(value) {
 }
 
 function fetchData() {
-    fetch('http://localhost:8081/provider/countCourseByProvider/1')
+    fetch('http://localhost:8083/provider/countCourseByProvider/1')
         .then(response => response.json())
         .then(courseData => {
             document.getElementById('courseCount').textContent = formatNumber(courseData.data);
@@ -46,7 +46,7 @@ function fetchData() {
         })
         .catch(error => console.error('Error fetching course data:', error));
 
-    fetch('http://localhost:8081/provider/getStudentRegister/1')
+    fetch('http://localhost:8083/provider/getStudentRegister/1')
         .then(response => response.json())
         .then(studentData => {
             document.getElementById('studentCount').textContent = formatNumber(studentData.data);
@@ -54,7 +54,7 @@ function fetchData() {
         })
         .catch(error => console.error('Error fetching student data:', error));
 
-    fetch('http://localhost:8081/provider/getTotalRevenue/1')
+    fetch('http://localhost:8083/provider/getTotalRevenue/1')
         .then(response => response.json())
         .then(revenueData => {
             document.getElementById('revenueCount').textContent = formatCurrency(revenueData.data);

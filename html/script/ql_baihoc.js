@@ -4,67 +4,63 @@ let preview_btn = 1;
 const jwt = localStorage.getItem('jwt');
 
 function getLesson() {
-   var urlParams = new URLSearchParams(window.location.search);
-   var data = urlParams.get('data');
-   console.log(data);
- 
-   fetch('http://localhost:8081/lesson/getlessonbychapter/'+ data,{
-    headers: {
-      'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
-    }
+  var urlParams = new URLSearchParams(window.location.search);
+  var data = urlParams.get('data');
+  console.log(data);
+
+  fetch('http://localhost:8083/lesson/getlessonbychapter/' + data, {
+      headers: {
+          'Authorization': `Bearer ${jwt}` // Add JWT to the Authorization header
+      }
   })
-     .then(response => response.json())
-     .then(data1 => {
+  .then(response => response.json())
+  .then(data1 => {
       data = data1.data;
-      console.log(data)
-       let chapterinfo = document.getElementById("chapterinfo");
-       let chapter = `<div class="iq-card">
-         <div class="iq-card-header d-flex justify-content-between">
-           <div class="iq-header-title">
-             <h4 class="card-title">${data.title}</h4>
-           </div>
-         </div>
-         <div class="iq-card-body">
-           <form>
-             <div class="form-group">
-               <p>${data.description}</p>
-             </div>
-           </form>
-         </div>
-       </div>`;
-       chapterinfo.innerHTML = chapter;
- 
-       let lstlesson = '';
-       let listlesson = document.getElementById('listlesson');
-       data.forEach(element => {
-         lstlesson += `<tr>
-           <td contenteditable="true">${element.id}</td>
-           <td contenteditable="true">${element.title}</td>
-           <td>
-           <span class="#"><button onclick="previewLesson(${element.id})" type="button" class="btn btn-outline-primary">Preview</button></span>
-           </td>
-           <td>
-             <span class="#"><a href="suachuong.html" class="indigo-text"><i class="las la-edit" aria-hidden="true"></i></a></span>
-           </td>
-           <td>
-             <span class="table-up"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a></span>
-             <span class="table-down"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span>
-           </td>
-           <td>
-             <span class="table-remove"><button onclick="removelesson(${element.id})" type="button" class="btn iq-bg-danger btn-rounded btn-sm my-0">Remove</button></span>
-           </td>
-         </tr>`;
-       });
- 
-       listlesson.querySelector('tbody').innerHTML = lstlesson;
-     })
-     .catch(error => {
-       console.error('Có lỗi xảy ra:', error);
-     });
- }
+      console.log(data);
+      
+      // Remove title and description
+      let chapterinfo = document.getElementById("chapterinfo");
+      let chapter = `<div class="iq-card">
+          <div class="iq-card-body">
+              <form>
+                  <div class="form-group">
+                      <p>No additional information available.</p> <!-- Optional placeholder -->
+                  </div>
+              </form>
+          </div>
+      </div>`;
+
+      let lstlesson = '';
+      let listlesson = document.getElementById('listlesson');
+      data.forEach(element => {
+          lstlesson += `<tr>
+              <td contenteditable="true">${element.id}</td>
+              <td contenteditable="true">${element.title}</td>
+              <td>
+                  <span class="#"><button onclick="previewLesson(${element.id})" type="button" class="btn btn-outline-primary">Preview</button></span>
+              </td>
+              <td>
+                  <span class="#"><a href="suachuong.html" class="indigo-text"><i class="las la-edit" aria-hidden="true"></i></a></span>
+              </td>
+              <td>
+                  <span class="table-up"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a></span>
+                  <span class="table-down"><a href="#!" class="indigo-text"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span>
+              </td>
+              <td>
+                  <span class="table-remove"><button onclick="removelesson(${element.id})" type="button" class="btn iq-bg-danger btn-rounded btn-sm my-0">Remove</button></span>
+              </td>
+          </tr>`;
+      });
+
+      listlesson.querySelector('tbody').innerHTML = lstlesson;
+  })
+  .catch(error => {
+      console.error('Có lỗi xảy ra:', error);
+  });
+}
  
  function removelesson(data){
-  const url = 'http://localhost:8080/upload/lesson/delete' + data;
+  const url = 'http://localhost:8083/upload/lesson/delete' + data;
   
   fetch(url, {
     method: 'DELETE',
@@ -94,7 +90,7 @@ function previewLesson(id){
   let frame = document.getElementById("previewframe")
   //console.log(id)
   if(preview_btn === 1){
-    fetch("http://localhost:8081/lesson/getlessonbyid?id="+id,{
+    fetch("http://localhost:8083/lesson/getlessonbyid?id="+id,{
       headers: {
         'Authorization': `Bearer ${jwt}` // Thêm JWT vào header Authorization
       }
@@ -108,7 +104,6 @@ function previewLesson(id){
       if(data.videoUrl!=null){
         document.getElementById("videoContainer").innerHTML = `<iframe class="embed-responsive-item" src="${data.videoUrl}" allowfullscreen=""></iframe>`
       }
-      document.getElementById("lessonContent").innerText = data.content;
     })
     preview_btn = 0 ;
   }

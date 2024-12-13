@@ -6,7 +6,7 @@ function getCourse(id) {
     //     return;
     // }
 
-    fetch('http://localhost:8081/course/provider/'+5, {
+    fetch('http://localhost:8083/course/provider/' + 1, {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -20,19 +20,23 @@ function getCourse(id) {
         return response.json();
     })
     .then(data1 => {
-        data = data1.data;
-        console.log(data)
+        const data = data1.data;
+        console.log(data);
         let html = "";
         let course_conn = document.getElementById('course_con');
+        const numberFormat = new Intl.NumberFormat('vi-VN'); // Vietnamese locale
+
         data.forEach(element => {
-            console.log(element)
+            console.log(element);
             const imageUrl = element.imageUrl || 'path/to/default-image.jpg';
+            const formattedPrice = numberFormat.format(element.price); // Format the price
+
             html += `<div class="col-sm-3 mb-4">
             <div class="card">
                 <img src="${imageUrl}" class="card-img-top" alt="${element.title}">
                 <div class="card-body">
                     <h5 class="card-title">${element.title}</h5>
-                    <p class="price">${element.price} VNĐ</p>               
+                    <p class="price">${formattedPrice} VNĐ</p>               
                     <p class="card-text">${element.description}</p>
                     <div class="d-flex justify-content-between">
                         <a href="ql_chuong.html?data=${element.id}" class="btn btn-primary">
@@ -58,7 +62,7 @@ function getCourse(id) {
 }
 
 function xoakhoahoc(id) {
-    const url = 'http://localhost:8081/course/delete/' + id;
+    const url = 'http://localhost:8083/course/delete/' + id;
 
     fetch(url, {
         method: 'DELETE',
@@ -81,11 +85,10 @@ function xoakhoahoc(id) {
 
 document.addEventListener('DOMContentLoaded', getCourse);
 
-
-    document.querySelectorAll('.iq-menu a[data-toggle="collapse"]').forEach((element) => {
-        element.addEventListener('click', function() {
-            const submenu = this.nextElementSibling;
-            submenu.classList.toggle('collapse'); // Toggle the collapse class
-            this.classList.toggle('collapsed'); // Toggle the collapsed class
-        });
+document.querySelectorAll('.iq-menu a[data-toggle="collapse"]').forEach((element) => {
+    element.addEventListener('click', function() {
+        const submenu = this.nextElementSibling;
+        submenu.classList.toggle('collapse'); // Toggle the collapse class
+        this.classList.toggle('collapsed'); // Toggle the collapsed class
     });
+});

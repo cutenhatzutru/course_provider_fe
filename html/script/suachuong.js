@@ -3,7 +3,7 @@ var data1 = urlParams.get('data');
 const jwt = localStorage.getItem('jwt');
 
 function getchapterbyid() {
-  fetch('http://localhost:8081/chapter/'+data1, {
+  fetch('http://localhost:8083/chapter/'+data1, {
     headers: {
       'Authorization': `Bearer ${jwt}` // Add JWT to Authorization header
     }
@@ -34,7 +34,7 @@ function updatechapter() {
 
   console.log(formData.getAll)
   // Send POST request to update the chapter
-  fetch('http://localhost:8081/chapter/update/'+ data1, { // Corrected URL concatenation
+  fetch('http://localhost:8083/chapter/update/'+ data1, { // Corrected URL concatenation
     method: 'PUT',
     headers: {
       'Authorization': `Bearer ${jwt}`,
