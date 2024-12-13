@@ -6,7 +6,7 @@ function getCourse(id) {
     //     return;
     // }
 
-    fetch('http://localhost:8081/course/provider/'+1, {
+    fetch('http://localhost:8081/course/provider/'+5, {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
